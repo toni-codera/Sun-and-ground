@@ -38,10 +38,17 @@
    font-size: 15px;
    margin-bottom: 20px;
    text-align: left;
+   display: flex;
+   align-items: center;
+   
 }
-.stats>span{
+.stat-title{
    display: inline-block;
-   width: 80px;
+   width: 60px;
+}
+.sub-stats{
+   margin-left: 60px;
+   color: #705425;
 }
 .description{
    font-weight: bold;
