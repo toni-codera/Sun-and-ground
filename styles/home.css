@@ -1,0 +1,134 @@
+/*------------->ARTICLE IMAGE<-------------*/
+.farm-back-image {
+   width: 100%;
+   height: auto;
+   object-fit: contain;
+}
+
+/*------------->ARTICLE 1<-------------*/
+.about-container {
+   padding: 50px 0;
+   color: #704525;
+}
+
+.about-container>h1 {
+   position: relative;
+   text-align: center;
+   width: 20vw;
+   left: 40%;
+   font-size: 3.8vw;
+   margin-bottom: 20px;
+}
+
+.about {
+   position: relative;
+   left: 12.5%;
+   width: 75vw;
+   font-size: 1.2vw;
+   text-align: center;
+}
+
+
+.starting-date {
+   margin-top: 40px;
+   display: flex;
+   align-items: center;
+}
+
+.starting-date>p {
+   font-size: 3.8vw;
+   font-weight: bold;
+   flex: 1;
+}
+
+.from {
+   text-align: right;
+}
+
+.year {
+   text-align: left;
+}
+
+.about-image-box {
+   flex: 1;
+   text-align: center;
+}
+
+.logo-in-about {
+   width: 8vw;
+   height: auto;
+}
+
+/*------------->ARTICLE 2<-------------*/
+.cows {
+   margin-top: 40px;
+   width: 100%;
+   background: url("../images/others/grass-fed-cows.jpg") center center no-repeat;
+   background-size: cover;
+   padding: 25.5vh 0;
+   position: relative;
+}
+
+.cows::after {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: rgba(0, 0, 0, 0.6);
+   color: #FBF9F3;
+   z-index: 1;
+}
+
+.cows>div>span {
+   color: #FBF9F3;
+   font-size: 2vw;
+   position: absolute;
+   z-index: 2;
+   top: 40%;
+   left: 100px;
+}
+
+.dairy-products {
+   position: absolute;
+   z-index: 2;
+   width: 22vw;
+   height: auto;
+   right: 100px;
+   top: 25%;
+}
+
+/*------------->ARTICLE 3<-------------*/
+.action-text-container {
+   width: 98vw;
+   text-align: center;
+   margin-top: 70px;
+}
+
+.action-text {
+   font-size: 42px;
+   color: #40A944;
+}
+
+.actions-container {
+   display: flex;
+   margin-top: 50px;
+   align-items: center;
+   justify-content: center;
+   column-gap: 5vw;
+}
+
+.farming,
+.processing,
+.packaging,
+.distribution,
+.marketing {
+   text-align: center;
+   color: #704525;
+}
+
+.action-image {
+   width: 8vw;
+   height: auto;
+}
