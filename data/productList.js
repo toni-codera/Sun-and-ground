@@ -1,4 +1,4 @@
-const products = [
+export const products = [
   {
     id: "0000-0001",
     image: "images/products/dry_strawberry.gif",
@@ -98,7 +98,7 @@ const products = [
   },
   {
     id: "0000-1001",
-    image: "images/products/dry_red_apple.png",
+    image: "images/products/dry_apple.jpg",
     name: "Сушени чбълки",
     quantity: [250,500,1000,2000],
     priceCents: [500,950,1750,3400],
@@ -181,7 +181,7 @@ const products = [
     briefDescription:"Ягодите от късния сорт Фламенко се отличават с интенсзивния си аромат и сладък вкус. Сладкото е ръчно направено и не съдържа консервантин.",
   },
   {
-    id: "0001-0000 ",
+    id: "0001-0000",
     image: "images/products/peach_jam.jpg",
     name: "Слатко от праскови",
     quantity: [400,1000,1500,2000],
@@ -393,7 +393,7 @@ const products = [
     category:"Пчелни продукти",
     variety:"Пчелен мед",
     cultivation:"Собствено производство",
-    characteristics:"Годен за консумация с десетилетия",
+    characteristics:"Неограничен срок ",
     briefDescription:"Висококачрствения мед дължим на нашите пчели разположени във серцето на фермата. Без добавена захар.",
   },
   {

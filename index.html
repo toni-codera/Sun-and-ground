@@ -4,15 +4,70 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/products.css" />
+    <link rel="stylesheet" href="styles/login.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"><title>Земя и слънце</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Земя и слънце</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body>
+    <aside class="js-login-form">
+      <form>
+        <div>
+          <div class="welcome-container">
+            <h1 class="welcome">Добре дошли</h1>
+          </div>
+          <div class="text-container">
+            <span class="text"
+              >Влезте в акаунта си за бързо и сигурно пазаруване</span
+            >
+          </div>
+          <div class="username-container">
+            <input type="text" class="username" placeholder="Потребител" />
+          </div>
+          <div class="password-container">
+            <input type="password" class="password" placeholder="Парола" />
+          </div>
+          <div class="additional-functions">
+            <div class="remember-container">
+              <input type="checkbox" class="remember-checkbox" />
+              <span class="remember-text">Запомни ме</span>
+            </div>
+            <div class="forgotten-password-container">
+              <a>
+                <span class="forgotten-password-text">Забравена парола</span>
+              </a>
+            </div>
+          </div>
+          <div class="login-container">
+            <button type="submit" class="login">Влез</button>
+          </div>
+        </div>
+        <div>
+          <div class="account-text-container">
+            <h1 class="account-text">Още нямате акаунт?</h1>
+          </div>
+          <div class="register-text-container">
+            <span class="register-text">Регистрирай се сега! </span>
+          </div>
+          <div class="register-container">
+            <a class="register">Регистрация</a>
+          </div>
+          <div class="login-google-container">
+            <button class="login-google">Влезте чрез Google</button>
+          </div>
+          <div class="login-facebook-container">
+            <button class="login-facebook">Влезте чрез Facebook</button>
+          </div>
+        </div>
+      </form>
+    </aside>
     <header>
       <div class="right-side-header">
-        <img class="logo-image" src="images/logos/sun-and-ground.png"/>
-        <h1 class="logo-text">Земя и слънце</h1>
+        <a class="js-logo" href="#"><img class="logo-image" src="images/logos/sun-and-ground.png"/></a>
+        <a class="js-logo" href="#"><h1 class="logo-text">Земя и слънце</h1></a>
       </div>
       <div class="left-side-header">
         <div class="phone-image-container">
@@ -22,12 +77,12 @@
           <p> 0895229715</p>
           </div>
         </div>
-        <div class="profile-image-container">
+        <div class="profile-image-container js-login-container">
           <img class="profile-image" src="images/logos/farmer.png" />
           <p class="login-text">Вход/Регистрация</p>
         </div>
         <div class="basket-image-container">
-          <img class="basket-image" src="images/logos/wicker-basket1.png" />
+          <img class="basket-image" src="images/logos/wicker-basket1.png"/>
           <p class="basket-text">Кошница</p>
         </div>
       </div>
@@ -36,79 +91,79 @@
       <ul class="menu">
         <li><a><div class="nav-logo-container"><img src="images/logos/dried-fruits-logo.png" class="nav-logo-img"></div><span>Сушени плодове</span></a>
           <ul class="sub-menu">
-            <li><a href="blank">Ягоди</a></li>
-            <li><a href="blank">Малини</a></li>
-            <li><a href="blank">Праскови</a></li>
-            <li><a href="blank">Кайсии</a></li>
-            <li><a href="blank">Черници</a></li>
-            <li><a href="blank">Бели черници</a></li>
-            <li><a href="blank">Смокини</a></li>
-            <li><a href="blank">Череши</a></li>
-            <li><a href="blank">Червена ябълка</a></li>
-            <li><a href="blank">Круши</a></li>
-            <li><a href="blank">Сливи</a></li>
+            <li><a class="product" id="0000-0001" href="#">Ягоди</a></li>
+            <li><a class="product" id="0000-0010" href="#">Малини</a></li>
+            <li><a class="product" id="0000-0011" href="#">Праскови</a></li>
+            <li><a class="product" id="0000-0100" href="#">Кайсии</a></li>
+            <li><a class="product" id="0000-0101" href="#">Черници</a></li>
+            <li><a class="product" id="0000-0110" href="#">Бели черници</a></li>
+            <li><a class="product" id="0000-0111" href="#">Смокини</a></li>
+            <li><a class="product" id="0000-1000" href="#">Череши</a></li>
+            <li><a class="product" id="0000-1001" href="#">Ябълка</a></li>
+            <li><a class="product" id="0000-1010" href="#">Круши</a></li>
+            <li><a class="product" id="0000-1011" href="#">Сливи</a></li>
           </ul>
         </li>
         <li><a><div class="nav-logo-container"><img src="images/logos/compote-logo.png" class="nav-logo-img"></div><span>Компоти</span>
         <ul class="sub-menu">
-          <li><a href="blank">Ягоди</a></li>
-          <li><a href="blank">Праскови</a></li>
-          <li><a href="blank">Череши</a></li>
+          <li><a class="product" id="0000-1100" href="#">Ягоди</a></li>
+          <li><a class="product" id="0000-1101" href="#">Праскови</a></li>
+          <li><a class="product" id="0000-1110" href="#">Череши</a></li>
           
         </ul>
       </li>
         <li><a><div class="nav-logo-container"><img src="images/logos/jam-logo.png" class="nav-logo-img"></div><span>Сладко</span></a>
           <ul class="sub-menu">
-            <li><a href="blank">Ягоди</a></li>
-            <li><a href="blank">Праскови</a></li>
-            <li><a href="blank">Боровинки</a></li>
-            <li><a href="blank">Кайсии</a></li>
-            <li><a href="blank">Смокини</a></li>
-            <li><a href="blank">Череши</a></li>
-            <li><a href="blank">Черници</a></li>
-            <li><a href="blank">Сливи</a></li>
+            <li><a class="product" id="0000-1111" href="#">Ягоди</a></li>
+            <li><a class="product" id="0001-0000" href="#">Праскови</a></li>
+            <li><a class="product" id="0001-0001" href="#">Боровинки</a></li>
+            <li><a class="product" id="0001-0010" href="#">Кайсии</a></li>
+            <li><a class="product" id="0001-0011" href="#">Смокини</a></li>
+            <li><a class="product" id="0001-0100" href="#">Череши</a></li>
+            <li><a class="product" id="0001-0101" href="#">Черници</a></li>
+            <li><a class="product" id="0001-0110" href="#">Сливи</a></li>
           </ul>
         </li>
         <li><a><div class="nav-logo-container"><img src="images/logos/pickle-logo.png" class="nav-logo-img"></div><span>Туршия</span></a>
         <ul class="sub-menu">
-          <li><a href="blank">Кисели краставички</a></li>
-          <li><a href="blank">Царска туршия</a></li>
-          <li><a href="blank">Люти чушки</a></li>
+          <li><a class="product" id="0001-0111" href="#">Кисели краставички</a></li>
+          <li><a class="product" id="0001-1000" href="#">Царска туршия</a></li>
+          <li><a class="product" id="0001-1001" href="#">Люти чушки</a></li>
         </ul>
         </li>
         <li><a><div class="nav-logo-container"><img src="images/logos/nuts-logo.png" class="nav-logo-img"></div><span>Ядки</span>
         <ul class="sub-menu">
-            <li><a href="blank">Бадеми</a></li>
-            <li><a href="blank">Орехи</a></li>
-            <li><a href="blank">Фъстъци</a></li>
+            <li><a class="product" id="0001-1010" href="#">Бадеми</a></li>
+            <li><a class="product" id="0001-1011" href="#">Орехи</a></li>
+            <li><a class="product" id="0001-1100" href="#">Фъстъци</a></li>
           </ul>
         </li>
         <li><a><div class="nav-logo-container"><img src="images/logos/dairy-logo.png" class="nav-logo-img"></div><span>Млечни продукти</span>
         <ul class="sub-menu">
-          <li><a href="blank">Саламурено сирене</a></li>
-          <li><a href="blank">Кашкавал</a></li>
-          <li><a href="blank">Пресно сирене</a></li>
-          <li><a href="blank">Кисело мляко</a></li>
+          <li><a class="product" id="0001-1101" href="#">Саламурено сирене</a></li>
+          <li><a class="product" id="0001-1110" href="#">Кашкавал</a></li>
+          <li><a class="product" id="0001-1111" href="#">Пресно сирене</a></li>
+          <li><a class="product" id="0010-0000" href="#">Кисело мляко</a></li>
         </ul>
         </li>
         <li><a><div class="nav-logo-container"><img src="images/logos/honey-logo.png" class="nav-logo-img"></div><span>Пчелни продукти</span>
         <ul class="sub-menu">
-          <li><a href="blank">Мед</a></li>
-          <li><a href="blank">Пчелно млечице</a></li>
-          <li><a href="blank">Пчелен клей</a></li>
-          <li><a href="blank">Пчелен прашец</a></li>
+          <li><a class="product" id="0010-0001" href="#">Мед</a></li>
+          <li><a class="product" id="0010-0010" href="#">Пчелно млечице</a></li>
+          <li><a class="product" id="0010-0011" href="#">Пчелен клей</a></li>
+          <li><a class="product" id="0010-0100" href="#">Пчелен прашец</a></li>
         </ul>
         </li>
         <li><a><div class="nav-logo-container"><img src="images/logos/tea-logo.png" class="nav-logo-img"></div><span>Чай</span>
           <ul class="sub-menu">
-            <li><a href="blank">Лайка</a></li>
-            <li><a href="blank">Липа</a></li>
-            <li><a href="blank">Мащерка</a></li>
-            <li><a href="blank">Риган</a></li>
-            <li><a href="blank">Жълт кантарион</a></li>
-            <li><a href="blank">Бял равнец</a></li>
-            <li><a href="blank">Смокинови листа</a></li>
-            <li><a href="blank">Мента</a></li>
+            <li><a class="product" id="0010-0101" href="#">Лайка</a></li>
+            <li><a class="product" id="0010-0110" href="#">Липа</a></li>
+            <li><a class="product" id="0010-0111" href="#">Мащерка</a></li>
+            <li><a class="product" id="0010-1000" href="#">Риган</a></li>
+            <li><a class="product" id="0010-1001" href="#">Жълт кантарион</a></li>
+            <li><a class="product" id="0010-1010" href="#">Бял равнец</a></li>
+            <li><a class="product" id="0010-1011" href="#">Смокинови листа</a></li>
+            <li><a class="product" id="0010-1100" href="#">Мента</a></li>
           </ul>
         </li>
       </ul>
@@ -140,7 +195,7 @@
       </div>
 
     </footer>
-    <script src="data/productList.js"></script>
-    <script src="scripts/onload.js"></script>
+    <script type="module" src="scripts/onload.js"></script>
+    <script type="module" src="scripts/productLoad.js"></script>
   </body>
 </html>
