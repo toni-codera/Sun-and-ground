@@ -16,6 +16,16 @@ aside{
    right: 0;
    display: none;
 }
+
+.black-box{
+   position: fixed;
+   top: 0px;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0,0,0,0.5);
+   z-index: 3;
+   content: "";
+}
 .welcome{
    margin-bottom: 15px;
    font-size: 1.4rem;  

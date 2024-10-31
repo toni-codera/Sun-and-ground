@@ -1,34 +1,57 @@
 import { html } from "../scripts/productLoad.js";
-function loadContent(file){
-fetch(file)
-.then(response =>response.text())
-.then(data => document.querySelector(".js-main-content").innerHTML = data)
-.catch(error =>console.error('Error loading content:', error));
+
+
+/*Change content in main section function */
+function loadContent(file) {
+  $.ajax({
+    url: file,
+    success: data=> {$('.js-main-content').html(data);},
+    error: error => {console.error('Error loading content:', error);}
+  });
 }
 
-window.onload = ()=>{
-   loadContent('home.html');
-};
-
-
-const logoLinks = document.querySelectorAll('.js-logo');
-
-logoLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    loadContent('home.html');
-  });
+/*Load main content onload*/
+$(document).ready(()=>{
+  loadContent('home.html');
 });
 
+/*Load main content on logo click*/
 
-const productLinks = document.querySelectorAll('.product')
-productLinks.forEach(link =>{
-  link.addEventListener('click',()=>{
-   document.querySelector(".js-main-content").innerHTML = html;
-});
-});
-
-
-$(".js-login-container").click(()=>{
-  $(".js-login-form").fadeIn(100);
+$(".js-logo").click(()=>{
+  loadContent("home.html");
 })
 
+/*Products pop up*/
+
+$('.product').click(function() {
+  $('.js-main-content').html(html);
+});
+
+/*Login pop up*/
+const blackBox = $(".js-black-box");
+const loginForm = $(".js-login-form");
+$(".js-login-container").click(()=>{
+  loginForm.fadeIn(100);
+  setTimeout(()=>{blackBox.addClass("black-box");},50)
+});
+
+/*Login pop out*/
+function exitLogin(){
+  loginForm.fadeOut(100);
+  blackBox.removeClass("black-box")
+}
+
+blackBox.click(()=>{
+  exitLogin();
+});
+
+$(document).keydown((event)=>{
+  if(event.keyCode === 27){
+    exitLogin();
+  }
+});
+/*Register form pop up*/
+$('.register').click(()=>{
+  loadContent('registration.html');
+  exitLogin();
+});

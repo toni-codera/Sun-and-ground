@@ -3,7 +3,7 @@
    margin: 0;
    padding: 0;
 }
-.register{
+.register-section{
    margin: 30px auto;
    width: 60%;
 }
@@ -28,7 +28,7 @@ hr{
 .box{
    flex-basis: 40%;
 }
-.name, .family-name, .email, .password, .phone-number,.date-of-birth{
+.register-name, .register-family-name, .register-email, .register-password, .register-phone-number,.date-of-birth{
    padding-left: 6px;
    width: 20vw;
    min-width: 120px;
@@ -37,7 +37,7 @@ hr{
    border: solid 1px #d0d0d0;
    border-radius: 4px;
 }
-.name:focus, .family-name:focus, .email:focus, .password:focus, .phone-number:focus{
+.register-name:focus, .register-family-name:focus, .register-email:focus, .register-password:focus, .register-phone-number:focus{
    outline: 1px solid #d0d0d0;
 }
 
