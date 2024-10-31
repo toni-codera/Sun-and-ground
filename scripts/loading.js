@@ -55,8 +55,10 @@ $('.register').click(()=>{
   loadContent('registration.html');
   exitLogin();
 });
-/* Load main content after registration */
-$('.register-button').click(()=>{
-  loadContent('home.html');
-  console.log("clicked");
+/*Create registretion*/
+$(document).ready(()=>{
+  $(".register-button").click(()=>{
+  loadContent('.home.html');
+  console.log("awdijiawdjiijadwijadwijdawijawd")
 });
+})
