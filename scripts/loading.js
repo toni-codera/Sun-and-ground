@@ -1,4 +1,4 @@
-import { html } from "../scripts/productLoad.js";
+import { html } from "./productLoad.js";
 
 
 /*Change content in main section function */
@@ -54,4 +54,9 @@ $(document).keydown((event)=>{
 $('.register').click(()=>{
   loadContent('registration.html');
   exitLogin();
+});
+/* Load main content after registration */
+$('.register-button').click(()=>{
+  loadContent('home.html');
+  console.log("clicked");
 });
