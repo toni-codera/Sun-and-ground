@@ -91,8 +91,6 @@ productLinks.forEach(link => {
         </article>`
       }
     });
-    
-    console.log(html)
   });
   document.querySelector(".js-main-content").innerHTML = html;
 });
