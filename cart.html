@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/cart.css" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/96dd69d61c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section class="cart">
+      <article class="cart-inventory">
+        <div class="cart-header-container">
+          <h1 class="cart-welcome-text">Добре дошли</h1>
+          <hr />
+        </div>
+        <div class="cart-container">
+          <div class="cart-product-container">
+            <div class="cart-image-container">
+              <img class="cart-image" src="images/products/almonds.jpg" />
+            </div>
+            <div class="cart-product-info-container">
+              <span>Бадеми 500г</span>
+              <button class="cart-delete-item">
+                <i class="fa-regular fa-trash-can"></i>
+                <span>Изтрий от количката</span>
+              </button>
+            </div>
+            <div class="cart-quantity-container">
+              <div class="cart-quantity">
+                <div>
+                  <a class="decrease-quantity-button">
+                    <i class="fa-solid fa-minus"></i>
+                  </a>
+                </div>
+                <div>
+                  <input
+                    class="cart-item-quantity"
+                    type="number"
+                    min="0"
+                    max="100"
+                  />
+                </div>
+                <div>
+                  <a class="increase-quantity-button">
+                    <i class="fa-solid fa-plus"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="cart-price-container">8.99лв</div>
+          </div>
+        </div>
+      </article>
+      <article class="cart-checkout">
+        <div class="price-header-container">
+          <h1 class="price-main-text">Добре дошли</h1>
+          <hr />
+        </div>
+        <div>
+          <div class="price-product"></div>
+          <div class="price-delivery"></div>
+          <div class="price-total"></div>
+          <button class="complete-shopping">Купи</button>
+        </div>
+      </article>
+    </section>
+  </body>
+</html>
