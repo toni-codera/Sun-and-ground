@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,26 +8,30 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/cart.css" />
-    <title>Document</title>
+
+    <title>Количка</title>
     <script
       src="https://kit.fontawesome.com/96dd69d61c.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
-    <section class="cart">
-      <article class="cart-inventory">
+    <aside class="js-login-form"></aside>
+    <header></header>
+    <nav></nav>
+    <main class="cart" >
+      <section class="cart-inventory">
         <div class="cart-header-container">
-          <h1 class="cart-welcome-text">Добре дошли</h1>
+          <p class="cart-details-text">Детайли за кошницата</p>
           <hr />
         </div>
-        <div class="cart-container">
+        <div class="cart-container" data-product-price="8.99">
           <div class="cart-product-container">
             <div class="cart-image-container">
               <img class="cart-image" src="images/products/almonds.jpg" />
             </div>
             <div class="cart-product-info-container">
-              <span>Бадеми 500г</span>
+              <h1 class="cart-product-name">Бадеми 500г</h1>
               <button class="cart-delete-item">
                 <i class="fa-regular fa-trash-can"></i>
                 <span>Изтрий от количката</span>
@@ -36,9 +40,9 @@
             <div class="cart-quantity-container">
               <div class="cart-quantity">
                 <div>
-                  <a class="decrease-quantity-button">
+                  <button class="quantity-button minus">
                     <i class="fa-solid fa-minus"></i>
-                  </a>
+                  </button>
                 </div>
                 <div>
                   <input
@@ -46,31 +50,89 @@
                     type="number"
                     min="0"
                     max="100"
+                    value="1"
                   />
                 </div>
                 <div>
-                  <a class="increase-quantity-button">
+                  <button class="quantity-button plus">
                     <i class="fa-solid fa-plus"></i>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
-            <div class="cart-price-container">8.99лв</div>
+            <div class="cart-price-container">
+              <span class="item-total-price">8.99лв</span>
+            </div>
           </div>
         </div>
-      </article>
-      <article class="cart-checkout">
+
+        <div class="cart-container" data-product-price="8.99">
+          <div class="cart-product-container">
+            <div class="cart-image-container">
+              <img class="cart-image" src="images/products/almonds.jpg" />
+            </div>
+            <div class="cart-product-info-container">
+              <h1 class="cart-product-name">Бадеми 500г</h1>
+              <button class="cart-delete-item">
+                <i class="fa-regular fa-trash-can"></i>
+                <span>Изтрий от количката</span>
+              </button>
+            </div>
+            <div class="cart-quantity-container">
+              <div class="cart-quantity">
+                <div>
+                  <button class="quantity-button minus">
+                    <i class="fa-solid fa-minus"></i>
+                  </button>
+                </div>
+                <div>
+                  <input
+                    class="cart-item-quantity"
+                    type="number"
+                    min="0"
+                    max="100"
+                    value="1"
+                  />
+                </div>
+                <div>
+                  <button class="quantity-button plus">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="cart-price-container">
+              <span class="item-total-price">8.99лв</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cart-checkout">
         <div class="price-header-container">
-          <h1 class="price-main-text">Добре дошли</h1>
+          <p class="price-main-text">Информация за плащането:</p>
           <hr />
         </div>
-        <div>
-          <div class="price-product"></div>
-          <div class="price-delivery"></div>
-          <div class="price-total"></div>
-          <button class="complete-shopping">Купи</button>
+        <div class="checkout">
+          <div class="price-product">
+            <span class="price-product-text">Цена на продукт:</span>
+            <span class="price-product-value">0.00лв</span>
+          </div>
+          <div class="price-delivery">
+            <span class="price-delivery-text">Доставка:</span>
+            <span class="price-delivery-value">0.00лв</span>
+          </div>
+          <div class="price-total">
+            <span class="price-total-text">Крайна цена:</span>
+            <span class="price-total-value">0.00лв</span>
+          </div>
+          <button class="complete-shopping-button">Купи</button>
         </div>
-      </article>
-    </section>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="scripts/cart.js"></script>
+    <script type="module" src="scripts/loadBookends.js"></script>
+    <script type="module" src="scripts/productLoad.js"></script>
   </body>
 </html>

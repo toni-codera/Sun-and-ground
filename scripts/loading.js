@@ -58,7 +58,7 @@ $('.register').click(()=>{
 /*Create registretion*/
 $(document).ready(()=>{
   $(".register-button").click(()=>{
-  loadContent('.home.html');
+  loadContent('../home.html');
   console.log("awdijiawdjiijadwijadwijdawijawd")
 });
 })
