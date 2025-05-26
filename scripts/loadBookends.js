@@ -243,8 +243,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const productLinks = document.querySelectorAll('.product');
 
     productLinks.forEach(link => {
-        // Change href to '#' to prevent immediate navigation
-        link.href = '#'; 
         link.addEventListener('click', (event) => {
             event.preventDefault(); // Prevent the default link behavior
             const productId = link.id; // Gets the ID from the 'id' attribute of the <a> tag

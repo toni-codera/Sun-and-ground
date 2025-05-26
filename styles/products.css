@@ -17,8 +17,10 @@
   padding: 40px;
 }
 .product-image{
-   height: 400px;
-   width: 350px;
+   height: 50vh;
+   min-height: 35vh;
+   width: 23vw;
+   min-width: 15vw;
    object-fit: contain;
    border-radius: 4px;
 }

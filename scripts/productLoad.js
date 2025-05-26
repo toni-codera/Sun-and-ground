@@ -2,11 +2,15 @@ import { products } from "../data/productList.js";
 
 // Export a function that generates the product HTML for a given product
 // This makes it more flexible if you want to use it elsewhere too
-export function generateProductHtml(productId) {
+function getProductFromList(id){
+    const product = products.find(p => p.id === id);
+    return product;
+}
+function generateProductHtml(productId) {
     let productHtml = ""; // Use a local variable to prevent re-exporting 'html' state
 
     // Find the product by ID
-    const product = products.find(p => p.id === productId);
+    const product = getProductFromList(productId);
         productHtml = `
         <article class="product-container">
           <img class="product-image" src="${product.image}" />
@@ -86,7 +90,7 @@ function printProductOptions(product){
           value="${i}"
           ${checked}
         />
-        <p>${formatQuantity(product.quantity[i])} - ${formatCurrency(product.priceCents[i])}</p>
+        <p>${formatQuantity(product.weight[i])} - ${formatCurrency(product.priceCents[i])}</p>
       </div>
     `;
   }
@@ -106,8 +110,31 @@ function formatQuantity(weight){
   return (Math.round(weight) / 1000).toFixed(1) + " кг";
 }
 
-// function changeText(index, arrayOfPrices){
-//   const textField = document.querySelector(".selected-price");
-//   textField.textContent=arrayOfPrices[index];
-//   console.log(arrayOfPrices + index)
-// }
+
+
+export const cart = [];
+function setupAddToCartButton(product){
+    const addToCartButton = document.querySelector('.add-to-cart');
+    addToCartButton.addEventListener('click', ()=>{
+        cart.push(product);
+        localStorage.setItem("cart",cart);
+    });
+}
+
+
+document.querySelector('.option-input');
+document.addEventListener('DOMContentLoaded', () => {
+    const mainContent = document.querySelector('.js-main-content');
+    const selectedProductId = localStorage.getItem('selectedProductId');
+
+    if (selectedProductId) {
+        mainContent.innerHTML = generateProductHtml(selectedProductId);
+        const product = getProductFromList(selectedProductId);
+        setupAddToCartButton(product);
+        localStorage.removeItem('selectedProductId');
+        console.log(selectedProductId);
+    } else {
+        mainContent.innerHTML = '<h1>Вие не сте избрали продукт. Моля направете го от нашето меню.</h1>';
+        console.warn("No product ID found in localStorage for productPage.html");
+    }
+});

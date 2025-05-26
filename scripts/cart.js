@@ -1,3 +1,4 @@
+import { cart } from "./productLoad.js";
 document.addEventListener('DOMContentLoaded', () => {
     const deliveryPrice = 8.99;
     const cartInventory = document.querySelector('.cart-inventory');
@@ -30,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             totalPriceElement.textContent = `${(totalProductPrice + deliveryPrice).toFixed(2)}лв`;
         }
     }
-
+    
     
     cartInventory.querySelectorAll('.cart-container').forEach(container => {
         const minusButton = container.querySelector('.quantity-button.minus');
@@ -81,3 +82,55 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial update of all cart totals when the page loads
     updateCartTotals();
 });
+
+
+function fillCart(cart){
+    const cartHtml = '';
+    
+    cart.forEach(product => {
+        cartHtml += `
+            <div class="cart-item-container" data-product-price="8.99">
+          <div class="cart-product-container">
+            <div class="cart-image-container">
+              <img class="cart-image" src="${product.image}" />
+            </div>
+            <div class="cart-product-info-container">
+              <h1 class="cart-product-name">${product.name} ${product}</h1>
+              <button class="cart-delete-item">
+                <i class="fa-regular fa-trash-can"></i>
+                <span>Изтрий от количката</span>
+              </button>
+            </div>
+            <div class="cart-quantity-container">
+              <div class="cart-quantity">
+                <div>
+                  <button class="quantity-button minus">
+                    <i class="fa-solid fa-minus"></i>
+                  </button>
+                </div>
+                <div>
+                  <input
+                    class="cart-item-quantity"
+                    type="number"
+                    min="0"
+                    max="100"
+                    value="1"
+                  />
+                </div>
+                <div>
+                  <button class="quantity-button plus">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="cart-price-container">
+              <span class="item-total-price">8.99лв</span>
+            </div>
+          </div>
+        </div>
+        `
+    });
+}
+fillCart(cart);
+console.log(cart);

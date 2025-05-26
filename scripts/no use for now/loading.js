@@ -1,4 +1,4 @@
-import { html } from "./productLoad.js";
+import { html } from "../productLoad.js";
 
 
 /*Change content in main section function */

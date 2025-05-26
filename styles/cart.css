@@ -22,7 +22,7 @@ main{
    flex-direction: column;
    row-gap: 30px;
 }
-.cart-container{
+.cart-item-container{
    background-color: #FBF9F3;
 }
 .cart-details-text{
