@@ -5,8 +5,8 @@ const aside = document.querySelector('aside');
 
 header.innerHTML = `
 <div class="right-side-header">
-    <a class="js-logo" href="index.html"><img class="logo-image" src="images/logos/sun-and-ground.png"/></a>
-    <a class="js-logo" href="index.html"><h1 class="logo-text">Земя и слънце</h1></a>
+    <a class="js-logo" href="index.php"><img class="logo-image" src="images/logos/sun-and-ground.png"/></a>
+    <a class="js-logo" href="index.php"><h1 class="logo-text">Земя и слънце</h1></a>
 </div>
 <div class="left-side-header">
     <div class="phone-image-container">
@@ -21,7 +21,7 @@ header.innerHTML = `
         <p class="login-text">Вход/Регистрация</p>
     </div>
     <div class="basket-image-container">
-        <a href="cart.html">
+        <a href="cart.php">
             <img class="basket-image" src="images/logos/wicker-basket1.png"/>
             <p class="basket-text">Кошница</p>
         </a>
@@ -192,7 +192,7 @@ blackBox.classList.add('js-black-box');
 document.body.appendChild(blackBox);
 
 // CSS loading of the bookends
-function addStyles(filepath){
+/*function addStyles(filepath){
     const link = document.createElement('link');
     link.rel = 'stylesheet';
     link.href = filepath;
@@ -200,7 +200,7 @@ function addStyles(filepath){
 }
 addStyles('../styles/main.css');
 addStyles('../styles/login.css');
-
+*/
 
 //Login Pop-up/Pop-out Logic
 const loginTrigger = document.querySelector(".js-login-container");
@@ -220,17 +220,17 @@ loginTrigger.addEventListener("click", () => {
 
 // Function to handle login form exit
 function exitLogin() {
-        aside.style.opacity = '0';
-        aside.style.transition = 'opacity 0.1s ease-out';
-        setTimeout(() => {
-            aside.style.display = 'none';
-        }, 100);
-        blackBox.classList.remove("black-box");
+    aside.style.opacity = '0';
+    aside.style.transition = 'opacity 0.1s ease-out';
+    setTimeout(() => {
+        aside.style.display = 'none';
+    }, 100);
+    blackBox.classList.remove("black-box");
 }
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" || event.keyCode === 27) {
-    exitLogin();
-  }
+    if (event.key === "Escape" || event.keyCode === 27) {
+        exitLogin();
+    }
 });
 
 blackBox.addEventListener("click", () => {
@@ -249,7 +249,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             localStorage.setItem('selectedProductId', productId); // Stores the ID
 
-            window.location.href = 'productPage.html'; // Navigate to the product page
+            window.location.href = 'productPage.php'; // Navigate to the product page
         });
     });
 });

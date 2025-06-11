@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Земя и слънце</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/registration.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/login.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <aside class="js-login-form"></aside>
+    <header></header>
+    <nav></nav>
+    <section class="register-section">
+        <div class="register-text">
+            <h2>Регистрация</h2>
+        </div>
+        <hr />
+        <div class="form-container">
+            <form class="register-form">
+                <div class="row">
+                    <div class="informer">
+                        <span>Име</span>
+                    </div>
+                    <div class="box">
+                        <input type="text" class="register-name" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="informer">
+                        <span>Фамилия</span>
+                    </div>
+                    <div class="box">
+                        <input type="text" class="register-family-name" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="informer">
+                        <span>Имейл</span>
+                    </div>
+                    <div class="box">
+                        <input type="email" class="register-email" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="informer">
+                        <span>Парола</span>
+                    </div>
+                    <div class="box">
+                        <input type="password" class="register-password" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="informer">
+                        <span>Град</span>
+                    </div>
+                    <div class="box">
+                        <input type="text" class="register-town" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="informer">
+                        <span>Адрес</span>
+                    </div>
+                    <div class="box">
+                        <input type="text" class="register-address" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="informer">
+                        <span>Телефон</span>
+                    </div>
+                    <div class="box">
+                        <input type="tel" class="register-phone-number" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="informer">
+                        <span>Дата на раждане</span>
+                    </div>
+                    <div class="box">
+                        <input type="date" class="date-of-birth" />
+                    </div>
+                </div>
+                <div class="terms-container"></div>
+                <div class="buttons-box">
+                    <div class="reset-button-box">
+                        <input type="reset" value="Изчисти" class="reset-button" />
+                    </div>
+                    <div class="reg-button-box">
+                        <input type="submit" value="Регистрация" class="register-form-button" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer></footer>
+    <script src="scripts/loadBookends.js"></script>
+</body>
+
+</html>

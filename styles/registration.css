@@ -1,84 +1,112 @@
-*{
-   font-family: Roboto,Arial;
-   margin: 0;
-   padding: 0;
-}
-.register-section{
-   margin: 30px auto;
-   width: 60%;
-}
-.register-text{
-   margin-bottom: 15px;
-}
-hr{
-   margin-bottom: 30px;
-}
-.row{
-   display: flex;
-   justify-content: start;
-   align-items: center;
-   margin-bottom: 25px;
-}
-.informer{
-   flex-basis: 50%;
-}
-.informer>span{
-   font-size: 14px;
-}
-.box{
-   flex-basis: 40%;
-}
-.register-name, .register-family-name, .register-email, .register-password, .register-phone-number,.date-of-birth{
-   padding-left: 6px;
-   width: 20vw;
-   min-width: 120px;
-   height: 4vh;
-   min-height: 20px;
-   border: solid 1px #d0d0d0;
-   border-radius: 4px;
-}
-.register-name:focus, .register-family-name:focus, .register-email:focus, .register-password:focus, .register-phone-number:focus{
-   outline: 1px solid #d0d0d0;
+* {
+    font-family: Roboto, Arial;
+    margin: 0;
+    padding: 0;
 }
 
-.buttons-box{
-   display: flex;
-   justify-content: center;
-   margin-top: 40px;
-   column-gap: 20px;
+.register-section {
+    margin: 30px auto;
+    width: 60%;
 }
-.reg-button-box, .reset-button-box{
-   flex-basis: 40%;
+
+.register-text {
+    margin-bottom: 15px;
 }
-.register-button{
-   background-color: #40a944;
-   color: white;
-   border: none;
-   padding:  1.8vh 2.7vw;
-   font-weight: bold;
-   font-size: 1.2rem;
-   border-radius: 0.6rem;
-   cursor: pointer;
+
+hr {
+    margin-bottom: 30px;
 }
-.register-button:hover{
-   color: #000;
-   box-shadow:  2px 2px 5px rgba(0, 0, 0, 0.4), 
-   -2px -2px 5px rgba(0, 0, 0, 0.2);
-   transition-delay: 0.15s;
+
+.row {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 25px;
 }
-.reset-button:hover{
-   color: #40a944;
-   box-shadow:  3px 3px 8px rgba(0, 0, 0, 0.4), 
-   -3px -3px 8px rgba(0, 0, 0, 0.2);
-   transition-delay: 0.15s;
+
+.informer {
+    flex-basis: 50%;
 }
-.reset-button{
-   background-color: #151515;
-   color: white;
-   border: none;
-   padding:  1.8vh 2.7vw;
-   font-weight: bold;
-   font-size: 1.2rem;
-   border-radius: 0.6rem;
-   cursor: pointer;
+
+.informer>span {
+    font-size: 14px;
+}
+
+.box {
+    flex-basis: 40%;
+}
+
+.register-name,
+.register-family-name,
+.register-email,
+.register-password,
+.register-town,
+.register-address,
+.register-phone-number,
+.date-of-birth {
+    padding-left: 6px;
+    width: 20vw;
+    min-width: 120px;
+    height: 4vh;
+    min-height: 20px;
+    border: solid 1px #d0d0d0;
+    border-radius: 4px;
+}
+
+.register-name:focus,
+.register-family-name:focus,
+.register-email:focus,
+.register-password:focus,
+.register-town:focus,
+.register-address:focus,
+.register-phone-number:focus {
+    outline: 1px solid #d0d0d0;
+}
+
+.buttons-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    column-gap: 20px;
+}
+
+.reg-button-box,
+.reset-button-box {
+    flex-basis: 40%;
+}
+
+.register-form-button {
+    background-color: #40a944;
+    color: white;
+    border: none;
+    padding: 1.8vh 2.7vw;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 0.6rem;
+    cursor: pointer;
+}
+
+.register-form-button:hover {
+    color: #000;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4),
+        -2px -2px 5px rgba(0, 0, 0, 0.2);
+    transition-delay: 0.15s;
+}
+
+.reset-button:hover {
+    color: #40a944;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4),
+        -3px -3px 8px rgba(0, 0, 0, 0.2);
+    transition-delay: 0.15s;
+}
+
+.reset-button {
+    background-color: #151515;
+    color: white;
+    border: none;
+    padding: 1.8vh 2.7vw;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 0.6rem;
+    cursor: pointer;
 }

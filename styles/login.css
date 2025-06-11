@@ -1,152 +1,176 @@
-*{
-   font-family: Roboto, Arial;
-   margin: 0;
-   padding: 0;
+* {
+    font-family: Roboto, Arial;
+    margin: 0;
+    padding: 0;
 }
 
-aside{
-   width: 30vw;
-   max-width: 300px;
-   height: 100%;
-   padding: 3vw;
-   border-left: 1px solid #ccc;
-   background-color: #FBF9F3;
-   z-index: 4;
-   position: fixed;
-   right: 0;
-   display: none;
+aside {
+    width: 30vw;
+    max-width: 300px;
+    height: 100%;
+    padding: 3vw;
+    border-left: 1px solid #ccc;
+    background-color: #FBF9F3;
+    z-index: 4;
+    position: fixed;
+    right: 0;
+    display: none;
 }
 
-.black-box{
-   position: fixed;
-   top: 0px;
-   width: 100%;
-   height: 100%;
-   background-color: rgba(0,0,0,0.5);
-   z-index: 3;
-   content: "";
-}
-.welcome{
-   margin-bottom: 15px;
-   font-size: 1.4rem;  
-}
-.text{
-   font-size: 0.8rem;
-}
-.text-container{
-   margin-bottom: 20px;
-}
-.username, .password{
-   width: 100%;
-   height: 2rem;
-   border-radius: 4px;
-   margin-bottom: 15px;
-   font-size: 0.9rem;
-   padding: 0 6px;
-   border: none;
-   background-color: rgba(76, 126, 63, 0.7);
-   color: black;
-}
-.username:focus, .password:focus{
-   outline: none;
-}
-.username::placeholder, .password::placeholder{
-   color: white;
-   font-size: 0.8rem;
-}
-input:focus::-webkit-input-placeholder{
-   color:transparent;
+.black-box {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    content: "";
 }
 
-.additional-functions{
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   margin-bottom: 20px;
+.welcome {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
 }
-.remember-text{
-   font-size: 0.7rem;
+
+.text {
+    font-size: 0.8rem;
 }
-.remember-checkbox{
-   width: 12px;
-   height: 12px;
-   vertical-align: middle;
-   accent-color: #40A944;
+
+.text-container {
+    margin-bottom: 20px;
 }
-.forgotten-password-text{
-   width: 100%;
-   font-size: 0.75rem;
-   color: #40A944;
-   text-decoration: underline;
-   cursor:pointer;
+
+.username,
+.password {
+    width: 100%;
+    height: 2rem;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    padding: 0 6px;
+    border: none;
+    background-color: rgba(76, 126, 63, 0.7);
+    color: black;
 }
-.login-container{
-      margin-bottom: 30px;
+
+.username:focus,
+.password:focus {
+    outline: none;
 }
-.login{
-   width: 100%;
-   padding: 10px 0;
-   background-color: #40A944;
-   color: #FBF9F3;
-   border-radius: 4px;
-   border: none;
-   font-weight: bold;
-   font-size: 1.1rem;
-   cursor: pointer;
+
+.username::placeholder,
+.password::placeholder {
+    color: white;
+    font-size: 0.8rem;
 }
-.account-text-container{
-   margin-bottom: 15px;
+
+input:focus::-webkit-input-placeholder {
+    color: transparent;
 }
-.account-text{
-   font-size: 1.2rem; 
+
+.additional-functions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
-.register-text-container{
-   margin-bottom: 15px;
+
+.remember-text {
+    font-size: 0.7rem;
 }
-.register-button{
-   font-size: 0.8rem;
+
+.remember-checkbox {
+    width: 12px;
+    height: 12px;
+    vertical-align: middle;
+    accent-color: #40A944;
 }
-.register-container{
-   width: 100%;
-   height: auto;
-   margin-bottom: 20px;
+
+.forgotten-password-text {
+    width: 100%;
+    font-size: 0.75rem;
+    color: #40A944;
+    text-decoration: underline;
+    cursor: pointer;
 }
-.register{
-   display: inline-block;
-   text-align: center;
-   width: 100%;
-   padding: 10px 0;
-   background-color: #272525;
-   color: #FBF9F3;
-   border-radius: 4px;
-   border: none;
-   font-weight: bold;
-   font-size: 1.1rem;
-   cursor: pointer;
+
+.login-container {
+    margin-bottom: 30px;
 }
-.login-google-container{
-   margin-bottom: 10px;
+
+.login {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #40A944;
+    color: #FBF9F3;
+    border-radius: 4px;
+    border: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
 }
-.login-google{
-   width: 100%;
-   padding: 10px;
-   background-color: #4285F4;
-   color: #FBF9F3;
-   border-radius: 4px;
-   border: none;
-   font-weight: bold;
-   font-size:0.9rem;
-   cursor: pointer;
+
+.account-text-container {
+    margin-bottom: 15px;
 }
-.login-facebook{
-   width: 100%;
-   padding: 10px 0;
-   background-color: #3B5998;
-   color: #FBF9F3;
-   border-radius: 4px;
-   border: none;
-   font-weight: bold;
-   font-size: 0.9rem;
-   cursor: pointer;
-   text-align: center;
+
+.account-text {
+    font-size: 1.2rem;
+}
+
+.register-text-container {
+    margin-bottom: 15px;
+}
+
+.register-button {
+    font-size: 0.8rem;
+}
+
+.register-container {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.register {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #272525;
+    color: #FBF9F3;
+    border-radius: 4px;
+    border: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.login-google-container {
+    margin-bottom: 10px;
+}
+
+.login-google {
+    width: 100%;
+    padding: 10px;
+    background-color: #4285F4;
+    color: #FBF9F3;
+    border-radius: 4px;
+    border: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.login-facebook {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #3B5998;
+    color: #FBF9F3;
+    border-radius: 4px;
+    border: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-align: center;
 }

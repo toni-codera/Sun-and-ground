@@ -1,0 +1,13 @@
+USE sunandground;
+CREATE TABLE users(
+	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    pwd VARCHAR(255) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    city VARCHAR(25) NOT NULL,
+    address VARCHAR(255) NOT NULL,
+    zip_code VARCHAR(5) NOT NULL,
+    phone VARCHAR(20) NOT NULL,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIME
+);
