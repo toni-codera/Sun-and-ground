@@ -1,3 +1,7 @@
+<?php
+require_once 'includes/signup_view.inc.php';
+require_once 'includes/config_session.inc.php';
+?>
 <!DOCTYPE html>
 <html>
 
@@ -21,13 +25,13 @@
         </div>
         <hr />
         <div class="form-container">
-            <form class="register-form">
-                <div class="row">
+            <form action="includes/login.inc.php" method="post" class="register-form">
+                <!--<div class="row">
                     <div class="informer">
                         <span>Име</span>
                     </div>
                     <div class="box">
-                        <input type="text" class="register-name" />
+                        <input name="firstname" type="text" class="register-name" />
                     </div>
                 </div>
                 <div class="row">
@@ -35,7 +39,7 @@
                         <span>Фамилия</span>
                     </div>
                     <div class="box">
-                        <input type="text" class="register-family-name" />
+                        <input name="lastname" type="text" class="register-family-name" />
                     </div>
                 </div>
                 <div class="row">
@@ -43,7 +47,7 @@
                         <span>Имейл</span>
                     </div>
                     <div class="box">
-                        <input type="email" class="register-email" />
+                        <input name="email" type="email" class="register-email" />
                     </div>
                 </div>
                 <div class="row">
@@ -51,7 +55,15 @@
                         <span>Парола</span>
                     </div>
                     <div class="box">
-                        <input type="password" class="register-password" />
+                        <input name="pwd" type="password" class="register-password" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="informer">
+                        <span>Повторете паролата</span>
+                    </div>
+                    <div class="box">
+                        <input name="pwd_repeat" type="password" class="register-password" />
                     </div>
                 </div>
                 <div class="row">
@@ -59,7 +71,7 @@
                         <span>Град</span>
                     </div>
                     <div class="box">
-                        <input type="text" class="register-town" />
+                        <input name="city" type="text" class="register-town" />
                     </div>
                 </div>
                 <div class="row">
@@ -67,7 +79,7 @@
                         <span>Адрес</span>
                     </div>
                     <div class="box">
-                        <input type="text" class="register-address" />
+                        <input name="home_address" type="text" class="register-address" />
                     </div>
                 </div>
                 <div class="row">
@@ -75,17 +87,12 @@
                         <span>Телефон</span>
                     </div>
                     <div class="box">
-                        <input type="tel" class="register-phone-number" />
+                        <input name="phone" type="tel" class="register-phone-number" />
                     </div>
-                </div>
-                <div class="row">
-                    <div class="informer">
-                        <span>Дата на раждане</span>
-                    </div>
-                    <div class="box">
-                        <input type="date" class="date-of-birth" />
-                    </div>
-                </div>
+                </div>-->
+                <?php
+                signup_inputs();
+                ?>
                 <div class="terms-container"></div>
                 <div class="buttons-box">
                     <div class="reset-button-box">
@@ -96,6 +103,9 @@
                     </div>
                 </div>
             </form>
+            <?php
+            check_signup_errors();
+            ?>
         </div>
     </section>
     <footer></footer>

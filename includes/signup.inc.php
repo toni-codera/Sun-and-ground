@@ -1,0 +1,87 @@
+<?php
+//check if we got here legitimately
+//by signing up using the form
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $firstname = $_POST["firstname"];
+    $lasttname = $_POST["firstname"];
+    $pwd = $_POST["pwd"];
+    $pwd_repeat = $_POST["pwd"];
+    $email = $_POST["email"];
+    $city = $_POST["city"];
+    $home_address = $_POST["home_address"];
+    $phone = $_POST["phone"];
+
+    try {
+        require_once 'dbh.inc.php';
+        require_once 'signup_model.inc.php';
+        //require_once 'signup_view.inc.php';
+        require_once 'signup_contr.inc.php';
+
+        //ERROR HANDLERS
+        $errors = [];
+        if (is_input_empty($firstname, $lastname, $pwd, $email, $city, $home_address, $phone)) {
+            $errors["empty_input"] = "Попълнете всички полета!";
+        }
+        if (is_firstname_invalid($firstname)) {
+            $errors["firstname_invalid"] = "Неприемливо първо име!";
+        }
+        if (is_lastname_invalid($lastname)) {
+            $errors["lastname_invalid"] = "";
+        }
+        if (is_password_weak($pwd)) {
+            $errors["weak_password"] = "";
+        }
+        if (is_password_mismatch($pwd, $pwd_repeat)) {
+            $errors["password_mismatch"] = "";
+        }
+        if (is_email_invalid($email)) {
+            $errors["invalid_email"] = "";
+        }
+        if (is_email_registered($pdo, $email)) {
+            $errors["email_registered"] = "";
+        }
+        if (is_city_invalid($city)) {
+            $errors["invalid_city"] = "";
+        }
+        if (is_home_address_invalid($home_address)) {
+            $errors["invalid_home_address"] = "";
+        }
+        if (is_phone_invalid($phone)) {
+            $errors["invalid_phone"] = "";
+        }
+        if (is_phone_registered($pdo, $phone)) {
+            $errors["phone_registered"] = "";
+        }
+
+        require_once 'config_session.inc.php';
+
+        if ($errors) {
+            $_SESSION["errors_signup"] = $errors;
+
+            $signupData = [
+                "firstname" => $firstname,
+                "lastname" => $lastname,
+                "email" => $email,
+                "city" => $city,
+                "home_address" => $home_address,
+                "phone" => $phone
+            ];
+            $_SESSION["signup_data"] = $signupData;
+
+            header("Location: ../registration.php");
+            die();
+        }
+
+
+        create_user($pdo, $firstname, $lastname, $pwd, $email, $city, $home_address, $phone);
+
+        header("Location: ../index.php?signup=success");
+        $pdo = null;
+        $stmt = null;
+    } catch (PDOException $e) {
+        die("Query failed! " . $e->getMessage());
+    }
+} else {
+    header("Location: ../registration.php");
+    die();
+}

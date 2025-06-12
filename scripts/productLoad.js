@@ -98,9 +98,9 @@ export function generateProductHtml(productId) {
 
 function printProductOptions(product) {
     let productOptions = '';
-    for(let i = 0; i < product.options; i++){
+    for (let i = 0; i < product.options; i++) {
         let checked = i === 0 ? 'checked' : '';
-        productOptions+=`<div class="option-box">
+        productOptions += `<div class="option-box">
             <input
               type="radio"
               class="option-input"
@@ -133,11 +133,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mainContent && selectedProductId) {
         mainContent.innerHTML = generateProductHtml(selectedProductId);
         setupAddToCartButton(selectedProductId);
-        localStorage.removeItem('selectedProductId');
+        // Removed: localStorage.removeItem('selectedProductId');
         console.log("Product Page: Product ID loaded:", selectedProductId);
     }
     else if (mainContent && !selectedProductId) {
         console.warn("Product Load: No product ID found in localStorage, not loading product details.");
     }
-
 })

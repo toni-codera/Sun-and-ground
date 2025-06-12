@@ -135,7 +135,7 @@ footer.innerHTML = `
 </div>
 `;
 aside.innerHTML = `
-<form>
+<form action="includes/login.inc.php" method="post">
     <div>
       <div class="welcome-container">
         <h1 class="welcome">Добре дошли</h1>
@@ -145,11 +145,11 @@ aside.innerHTML = `
           >Влезте в акаунта си за бързо и сигурно пазаруване</span
         >
       </div>
-      <div class="username-container">
-        <input type="text" class="username" placeholder="Потребител" />
+      <div class="email-container">
+        <input name="email" type="text" class="email" placeholder="Имейл" />
       </div>
       <div class="password-container">
-        <input type="password" class="password" placeholder="Парола" />
+        <input name="pwd" type="password" class="password" placeholder="Парола" />
       </div>
       <div class="additional-functions">
         <div class="remember-container">
@@ -174,15 +174,12 @@ aside.innerHTML = `
         <span class="register-button">Регистрирай се сега! </span>
       </div>
       <div class="register-container">
-        <a class="register" href="registration.html">Регистрация</a>
-      </div>
-      <div class="login-google-container">
-        <button class="login-google">Влезте чрез Google</button>
-      </div>
-      <div class="login-facebook-container">
-        <button class="login-facebook">Влезте чрез Facebook</button>
+        <a class="register" href="registration.php">Регистрация</a>
       </div>
     </div>
+    <div class="login-feedback"><?php
+    check_login_errors();
+    ?></div>
 </form>
 `;
 
@@ -227,6 +224,8 @@ function exitLogin() {
     }, 100);
     blackBox.classList.remove("black-box");
 }
+
+
 document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" || event.keyCode === 27) {
         exitLogin();
