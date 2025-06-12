@@ -1,13 +1,13 @@
 <?php
 
 $host = 'localhost';
-$dbname = 'sunandground';
+$dbname = 'sun_and_ground';
 $dbusername = 'root';
 $dbpassword = '';
 
 try {
     $pdo = new PDO(
-        "mysql:$host;dbname=$dbname",
+        "mysql:host=$host;dbname=$dbname",
         $dbusername,
         $dbpassword
     );

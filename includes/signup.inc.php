@@ -3,9 +3,9 @@
 //by signing up using the form
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $firstname = $_POST["firstname"];
-    $lasttname = $_POST["firstname"];
+    $lastname = $_POST["lastname"];
     $pwd = $_POST["pwd"];
-    $pwd_repeat = $_POST["pwd"];
+    $pwd_repeat = $_POST["pwd_repeat"];
     $email = $_POST["email"];
     $city = $_POST["city"];
     $home_address = $_POST["home_address"];
@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         //ERROR HANDLERS
         $errors = [];
-        if (is_input_empty($firstname, $lastname, $pwd, $email, $city, $home_address, $phone)) {
+        if (is_input_empty($firstname, $lastname, $pwd, $pwd_repeat, $email, $city, $home_address, $phone)) {
             $errors["empty_input"] = "Попълнете всички полета!";
         }
         if (is_firstname_invalid($firstname)) {

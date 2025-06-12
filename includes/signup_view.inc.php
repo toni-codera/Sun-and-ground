@@ -37,7 +37,7 @@ function signup_inputs()
     ) {
         echo '<div class="row">
                     <div class="informer">
-                        <span>Име</span>
+                        <span>Фамилия</span>
                     </div>
                     <div class="box">
                         <input name="lastname" type="text" class="register-name
@@ -47,7 +47,7 @@ function signup_inputs()
     } else {
         echo '<div class="row">
                     <div class="informer">
-                        <span>Име</span>
+                        <span>Фамилия</span>
                     </div>
                     <div class="box">
                         <input name="lastname" type="text" class="register-name" />

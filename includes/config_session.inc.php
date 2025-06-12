@@ -14,7 +14,7 @@ session_set_cookie_params([
 session_start();
 //if we are logged in
 if (isset($_SESSION["user_id"])) {
-    if (isset($_SESSION["last_regeneration"])) {
+    if (!isset($_SESSION["last_regeneration"])) {
         regenerate_session_id_loggedin();
     } else {
         $interval = 60 * 30;
@@ -24,7 +24,7 @@ if (isset($_SESSION["user_id"])) {
     }
 } else //if we are loggedout
 {
-    if (isset($_SESSION["last_regeneration"])) {
+    if (!isset($_SESSION["last_regeneration"])) {
         regenerate_session_id();
     } else {
         $interval = 60 * 30;

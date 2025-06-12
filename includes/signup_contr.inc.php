@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-function is_input_empty(string $firsname, string $lastname, string $pwd, string $pwd_repeat, string $email, string $city, string $home_address, string $phone)
+function is_input_empty(string $firstname, string $lastname, string $pwd, string $pwd_repeat, string $email, string $city, string $home_address, string $phone)
 {
     if (empty($firstname) || empty($lastname) || empty($pwd) || empty($pwd_repeat) || empty($email) || empty($city) || empty($home_address) || empty($phone)) {
         return true;
@@ -13,7 +13,7 @@ function is_input_empty(string $firsname, string $lastname, string $pwd, string 
 
 function is_firstname_invalid(string $firstname)
 {
-    if (!preg_match("/^[a-zA-Z' ]{2,50}$/", $firstname)) {
+    if (!preg_match("/^[a-zA-Z\p{Cyrillic}' ]{2,50}$/u", $firstname)) {
         return true;
     } else {
         return false;
@@ -22,7 +22,7 @@ function is_firstname_invalid(string $firstname)
 
 function is_lastname_invalid(string $lastname)
 {
-    if (!preg_match("/^[a-zA-Z' ]{2,50}$/", $lastname)) {
+    if (!preg_match("/^[a-zA-Z\p{Cyrillic}' ]{2,50}$/u", $lastname)) {
         return true;
     } else {
         return false;
@@ -71,7 +71,7 @@ function is_email_registered(object $pdo, string $email)
 
 function is_city_invalid(string $city)
 {
-    if (!preg_match("/^[a-zA-Z- ]{2,50}$/", $city)) {
+    if (!preg_match("/^[a-zA-Z\p{Cyrillic}' ]{2,50}$/u", $city)) {
         return true;
     }
     return false;
