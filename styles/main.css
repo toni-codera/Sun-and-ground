@@ -17,12 +17,12 @@ header {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   height: 32vh;
+   padding-top: 4vw;
+   padding-bottom: 4vw;
    background-image: url("../images/others/background_header.webp");
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
-
 }
 
 .right-side-header {
@@ -225,4 +225,7 @@ footer::after {
 
 .polices {
    color: #FBF9F3;
+}
+.polices:hover {
+   color: rgb(240, 236, 14);
 }

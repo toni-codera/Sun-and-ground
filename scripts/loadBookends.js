@@ -127,14 +127,13 @@ footer.innerHTML = `
     <div class="footer-section">
       <h3>Политики</h3>
       <ul>
-        <li><a class="polices" href="#">Условия</a></li>
-        <li><a class="polices" href="#">Поверителност</a></li>
-        <li><a class="polices" href="#">Доставка и връщане</a></li>
+        <li><a class="polices js-terms" href="#">Условия за ползване &<br> Политика за поверителност</a></li>
+        <li><a class="polices js-delivery" href="#">Доставка и връщане</a></li>
       </ul>
     </div>
 </div>
 `;
-aside.innerHTML = `
+/*aside.innerHTML = `
 <form action="includes/login.inc.php" method="post">
     <div>
       <div class="welcome-container">
@@ -181,7 +180,7 @@ aside.innerHTML = `
     check_login_errors();
     ?></div>
 </form>
-`;
+`;*/
 
 //The black box shown when aside login form pops
 const blackBox = document.createElement('div');
@@ -204,7 +203,7 @@ const loginTrigger = document.querySelector(".js-login-container");
 
 //Shows login form
 loginTrigger.addEventListener("click", () => {
-    aside.style.display = 'block';
+    /*aside.style.display = 'block';
     aside.style.opacity = '0';
     aside.style.transition = 'opacity 0.1s ease-in';
     setTimeout(() => {
@@ -212,7 +211,8 @@ loginTrigger.addEventListener("click", () => {
     }, 100);
     setTimeout(() => {
         blackBox.classList.add("black-box");
-    }, 100);
+    }, 100);*/
+    window.location.href = "login.php";
 });
 
 // Function to handle login form exit
@@ -252,3 +252,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+//transfer to Terms&Policies onclick from footer
+const terms = document.querySelector('.js-terms');
+terms.addEventListener('click', ()=>{
+  window.location.href = 'policyAndTerms.html';
+})
+
+//transfer to Delivery onclick from footer
+const delivery = document.querySelector('.js-delivery');
+delivery.addEventListener('click', ()=>{
+  window.location.href = 'delivery.html';
+})

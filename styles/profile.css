@@ -1,0 +1,231 @@
+/* Universal box-sizing for easier layout */
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Basic font and reset */
+body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FBF9F3; /* Using your background color */
+}
+
+main {
+    width: 70%;
+    margin: 20px auto; /* Added some top/bottom margin for separation */
+    border: solid 1px black;
+    padding: 0; /* Remove padding from main itself, the children will manage it */
+    display: flex; /* Flex container for sidebar and content */
+    min-height: 450px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: subtle shadow */
+    background-color: #fff; /* Ensure main background is white for contrast */
+}
+
+.profile-options {
+    display: flex;
+    flex-direction: column; /* Vertical column for sidebar options */
+    flex-shrink: 0;
+    /* Changed fixed width to a percentage for responsiveness */
+    width: 25%; /* Now the sidebar will take 25% of the 'main' container's width */
+    min-width: 180px; /* Optional: Set a minimum width to prevent it from becoming too narrow */
+    max-width: 250px; /* Optional: Set a maximum width to prevent it from becoming too wide */
+    padding: 20px 0; /* Vertical padding only for the entire aside */
+    border-right: solid 1px black; /* Right border for desktop sidebar */
+    background-color: #f8f8f8; /* Light background for the sidebar */
+}
+
+.profile-options-header {
+    padding: 0 25px 0 20px; /* Padding for the header content to push it from borders */
+    margin-bottom: 15px; /* Space below header before the divider */
+}
+
+.profile-options-header-text {
+    /* Was: font-size: 20px; */
+    font-size: clamp(10px, 2vw, 20px); /* Min 10px, scales with 2vw, Max 20px */
+    font-weight: bold;
+    color: #333;
+}
+
+.profile-divider {
+    width: calc(100% - 45px); /* Adjusted width to fit within header padding */
+    border: none;
+    border-top: solid 1px rgb(192, 192, 192);
+    margin: 0 auto 20px auto; /* Top/bottom margin, and auto left/right for centering */
+}
+
+.profile-options-list {
+    display: flex;
+    flex-direction: column; /* Vertical list for desktop sidebar */
+    flex-grow: 1; /* Allows the list to take up remaining vertical space */
+}
+
+.profile-row {
+    background-color: transparent; /* Default background */
+    border: none; /* Remove default border from here */
+    padding: 10px 25px 10px 20px; /* Increased vertical padding, kept horizontal from .profile-options-header */
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; /* Smooth transition */
+    color: #555;
+    /* font-size: 16px; - Removed, handled by .profile-option clamp */
+    white-space: nowrap; /* Prevent text wrapping in sidebar rows on desktop */
+}
+
+.profile-row:hover {
+    background-color: #e0e0e0; /* Highlight on hover */
+}
+
+/* Styling for the active profile option - NOW GREEN */
+.profile-row.active {
+    background-color: #40A944; /* Your chosen green for active tab background */
+    color: white;
+    font-weight: bold;
+    border-left: 5px solid #328C38; /* A slightly darker green for the left border */
+    padding-left: 15px; /* Adjust padding due to new border */
+}
+
+/* Ensure the text within the option is styled consistently */
+.profile-option {
+    /* Was inherited or set at 16px */
+    font-size: clamp(8px, 1.2vw, 16px); /* Min 8px, scales with 1.2vw, Max 16px */
+    text-align: left; /* Align text to the left within the row */
+    font-weight: normal; /* Reset font-weight if .active makes it bold */
+    margin: 0; /* Remove any default paragraph margins */
+    padding: 0; /* Remove any default paragraph paddings */
+}
+
+/* Styles for the dynamic content section */
+.profile-content {
+    flex-grow: 1; /* Allow content section to take up remaining horizontal space */
+    padding: 20px; /* Padding inside the content area */
+    background-color: #fff;
+    color: #333;
+    margin-left: 3vw;
+    /* font-size: 16px; - Removed, handled by general body text clamp or specific elements */
+}
+
+.profile-content h2 {
+    /* Was 22px on mobile, but let's assume max 24px */
+    font-size: clamp(12px, 2.5vw, 24px); /* Min 12px, scales with 2.5vw, Max 24px */
+    margin-bottom: 20px;
+    color: #40A944; /* Changed heading color to your green */
+}
+
+.profile-content p {
+    /* General paragraph text */
+    font-size: clamp(8px, 1vw, 16px); /* Min 8px, scales with 1vw, Max 16px */
+    margin-bottom: 10px;
+}
+
+.profile-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px; /* Constrain form width for better appearance */
+    margin-top: 20px;
+}
+
+.profile-content form label {
+    /* Labels in forms */
+    font-size: clamp(8px, 1vw, 16px); /* Min 8px, scales with 1vw, Max 16px */
+    font-weight: bold;
+    color: #444;
+}
+
+.profile-content form input[type="text"],
+.profile-content form input[type="password"],
+.profile-content form input[type="email"],
+.profile-content form input[type="tel"] {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    /* Was: font-size: 16px; */
+    font-size: clamp(8px, 1vw, 16px); /* Min 8px, scales with 1vw, Max 16px */
+    width: 100%; /* Make inputs fill the form width */
+}
+
+.profile-content form button {
+    padding: 10px 20px;
+    background-color: #40A944; /* Changed button background to your green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* Was: font-size: 16px; */
+    font-size: clamp(10px, 1.2vw, 16px); /* Min 10px, scales with 1.2vw, Max 16px */
+    align-self: flex-start; /* Align button to the left */
+    transition: background-color 0.2s ease-in-out;
+}
+
+.profile-content form button:hover {
+    background-color: #328C38; /* Darker green for button hover */
+}
+
+/* Logout link remains red for its conventional meaning */
+.profile-content .logout-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #dc3545; /* Red for logout */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.profile-content .logout-link:hover {
+    background-color: #c82333;
+}
+
+/* ------------------------------------------- */
+/* Media Queries for Responsiveness */
+/* ------------------------------------------- */
+
+@media (max-width: 768px) {
+    main {
+        width: 95%; /* Make main wider on smaller screens */
+        flex-direction: column; /* Stack sidebar and content vertically */
+        margin-top: 10px; /* Reduce top margin */
+        min-height: auto; /* Allow main to shrink to content height */
+    }
+
+    .profile-options {
+        width: 100%; /* Sidebar takes full width */
+        min-width: auto; /* Reset min-width for mobile */
+        max-width: none; /* Reset max-width for mobile */
+        border-right: none; /* Remove right border */
+        border-bottom: solid 1px black; /* Add bottom border for separation */
+        padding: 10px 0; /* Reduced vertical padding */
+    }
+
+    .profile-options-header {
+        text-align: center; /* Center header text */
+        padding: 0 15px; /* Adjust padding */
+        margin-bottom: 10px; /* Smaller margin */
+    }
+
+    .profile-options-header-text {
+        /* Clamp should still work well here, but you can override if needed */
+    }
+
+    .profile-divider {
+        width: calc(100% - 30px); /* Adjust HR width for new padding (15px left/right) */
+        margin-bottom: 15px;
+    }
+
+    .profile-options-list {
+        flex-direction: row; /* Display options horizontally */
+        flex-wrap: wrap; /* Allow options to wrap to the next line */
+        justify-content: center; /* Center horizontal options */
+        gap: 8px; /* Gap between options */
+        padding: 0 10px; /* Horizontal padding for the list */
+    }
+
+    .profile-row {
+        padding: 8px 12px; /* Smaller padding for individual options */
+        /* font-size: 14px; - Clamp handles it */
+        white-space: normal; /* Allow text to wrap if needed */
+        border: 1px solid rgb(192, 192, 192);
+    }
+}
