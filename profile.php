@@ -1,3 +1,11 @@
+<?php
+require_once 'includes/config_session.inc.php';
+// Check if user is logged in, redirect if not
+if (!isset($_SESSION["user_id"])) {
+    header("Location: login.php");
+    die();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +15,8 @@
     <link rel="stylesheet" href="styles/profile.css">
     <title>Моят Профил</title> </head>
 <body>
-    <header></header>
-    <nav></nav>
+    <?php require_once 'bookends/header.php'; ?>
+    <?php require_once 'bookends/nav.php'; ?>
     <main>
         <aside class="profile-options">
             <div class="profile-options-header">
@@ -44,7 +52,19 @@
         <section id="profile-content" class="profile-content">
             </section>
     </main>
-    <footer></footer>
-    <script src="scripts/loadBookends.js"></script>
+    <?php require_once 'bookends/footer.php'; ?>
+    <script>
+        // Embed user data from PHP session into JavaScript
+        const userData = <?php
+        echo json_encode([
+            'firstName' => $_SESSION['user_firstname'] ?? 'N/A',
+            'lastName' => $_SESSION['user_lastname'] ?? 'N/A',
+            'email' => $_SESSION['user_email'] ?? 'N/A',
+            'phone' => $_SESSION['user_phone'] ?? 'N/A',
+            'city' => $_SESSION['user_city'] ?? 'N/A',
+            'address' => $_SESSION['user_address'] ?? 'N/A'
+        ]);
+        ?>;
+    </script>
     <script src="scripts/myProfile.js"></script> </body>
 </html>

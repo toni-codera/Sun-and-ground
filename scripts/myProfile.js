@@ -2,17 +2,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const profileRows = document.querySelectorAll('.profile-row');
     const profileContentSection = document.getElementById('profile-content');
 
-    // Define the content for each section (in a real app, this would be loaded via AJAX)
+    // Access the userData object globally (defined in profile.php)
+    // console.log(userData); // You can uncomment this to see the data in your browser console
+
+    // Define the content for each section
     const sectionsContent = {
         'personal-info': `
             <h2>Лична информация</h2>
-            <p><strong>Име:</strong> [Потребителско име от PHP]</p>
-            <p><strong>Фамилия:</strong> [Потребителска фамилия от PHP]</p>
-            <p><strong>Имейл:</strong> [Потребителски имейл от PHP]</p>
-            <p><strong>Телефон:</strong> [Потребителски телефон от PHP]</p>
-            <p><strong>Град:</strong> [Потребителски град от PHP]</p>
-            <p><strong>Адрес:</strong> [Потребителски адрес от PHP]</p>
-            <p><em>(Данните по-горе ще се заредят от базата данни)</em></p>
+            <p><strong>Име:</strong> ${userData.firstName}</p>
+            <p><strong>Фамилия:</strong> ${userData.lastName}</p>
+            <p><strong>Имейл:</strong> ${userData.email}</p>
+            <p><strong>Телефон:</strong> ${userData.phone}</p>
+            <p><strong>Град:</strong> ${userData.city}</p>
+            <p><strong>Адрес:</strong> ${userData.address}</p>
+            <p><em>(Данните по-горе се заредиха от базата данни)</em></p>
         `,
         'my-orders': `
             <h2>Моите поръчки</h2>

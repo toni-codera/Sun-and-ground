@@ -50,6 +50,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $_SESSION["user_id"] = $result["id"];
         $_SESSION["email"] = htmlspecialchars($result["email"]);
+        $_SESSION["firstname"] = htmlspecialchars($result["firstname"]);
+        $_SESSION["lastname"] = htmlspecialchars($result["lastname"]);
+        $_SESSION["city"] = htmlspecialchars($result["city"]);
+        $_SESSION["home_address"] = htmlspecialchars($result["home_address"]);
+        $_SESSION["phone"] = htmlspecialchars($result["phone"]);
 
         //reset the timer for when we have to regenerate the session id
         $_SESSION["last_regeneration"] = time();

@@ -9,7 +9,7 @@ require_once 'includes/login_view.inc.php'
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/loginPage.css">
     <link rel="stylesheet" href="styles/main.css">
-    <title>Document</title>
+    <title>Земя и слънце</title>
 </head>
 <body>
     <header></header>
@@ -57,9 +57,7 @@ require_once 'includes/login_view.inc.php'
                     <a class="register" href="registration.php">Регистрация</a>
                 </div>
             </div>
-            <div class="login-feedback"><?php
-            //check_login_errors();
-            ?></div>
+            <div class="login-feedback"></div>
         </form>
     </main>
     <footer></footer>

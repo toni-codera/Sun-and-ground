@@ -34,6 +34,8 @@ if (isset($_SESSION["user_id"])) {
     }
 }
 
+$is_logged_in = isset($_SESSION["user_id"]);
+
 
 function regenerate_session_id_loggedin()
 {

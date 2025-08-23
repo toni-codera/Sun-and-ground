@@ -26,31 +26,31 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $errors["firstname_invalid"] = "Неприемливо първо име!";
         }
         if (is_lastname_invalid($lastname)) {
-            $errors["lastname_invalid"] = "";
+            $errors["lastname_invalid"] = "Неприемливо фамилно име!";
         }
         if (is_password_weak($pwd)) {
-            $errors["weak_password"] = "";
+            $errors["weak_password"] = "Слаба парола!";
         }
         if (is_password_mismatch($pwd, $pwd_repeat)) {
-            $errors["password_mismatch"] = "";
+            $errors["password_mismatch"] = "Паролите не съвпадат!";
         }
         if (is_email_invalid($email)) {
-            $errors["invalid_email"] = "";
+            $errors["invalid_email"] = "Неправилен имейл!";
         }
         if (is_email_registered($pdo, $email)) {
-            $errors["email_registered"] = "";
+            $errors["email_registered"] = "Имейла вече е използван!";
         }
         if (is_city_invalid($city)) {
-            $errors["invalid_city"] = "";
+            $errors["invalid_city"] = "Невалиден град!";
         }
         if (is_home_address_invalid($home_address)) {
-            $errors["invalid_home_address"] = "";
+            $errors["invalid_home_address"] = "Невалиден адрес!";
         }
         if (is_phone_invalid($phone)) {
-            $errors["invalid_phone"] = "";
+            $errors["invalid_phone"] = "Невалиден телефонен номер!";
         }
         if (is_phone_registered($pdo, $phone)) {
-            $errors["phone_registered"] = "";
+            $errors["phone_registered"] = "Телефонния номер е регистриран!";
         }
 
         require_once 'config_session.inc.php';
