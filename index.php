@@ -1,6 +1,6 @@
 <?php
 require_once 'includes/config_session.inc.php';
-require_once 'includes/login_view.inc.php'
+require_once 'includes/login_view.inc.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,9 +20,8 @@ require_once 'includes/login_view.inc.php'
 </head>
 
 <body>
-    <aside></aside>
-    <header></header>
-    <nav></nav>
+    <?php require_once 'bookends/header.php';?>
+    <?php require_once 'bookends/nav.php';?>
     <section class="js-main-content">
         <article>
             <img class="farm-back-image" src="images/others/back.jpg" />
@@ -91,7 +90,7 @@ require_once 'includes/login_view.inc.php'
             </div>
         </article>
     </section>
-    <footer></footer>
+    <?php require_once 'bookends/footer.php';?>
     <script src="scripts/loadBookends.js"></script>
 </body>
 

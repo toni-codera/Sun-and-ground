@@ -110,3 +110,6 @@ hr {
     border-radius: 0.6rem;
     cursor: pointer;
 }
+.signup-error{
+    color: red;
+}

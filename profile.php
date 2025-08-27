@@ -57,12 +57,12 @@ if (!isset($_SESSION["user_id"])) {
         // Embed user data from PHP session into JavaScript
         const userData = <?php
         echo json_encode([
-            'firstName' => $_SESSION['user_firstname'] ?? 'N/A',
-            'lastName' => $_SESSION['user_lastname'] ?? 'N/A',
-            'email' => $_SESSION['user_email'] ?? 'N/A',
-            'phone' => $_SESSION['user_phone'] ?? 'N/A',
-            'city' => $_SESSION['user_city'] ?? 'N/A',
-            'address' => $_SESSION['user_address'] ?? 'N/A'
+            'firstName' => $_SESSION['firstname'] ?? 'N/A',
+            'lastName' => $_SESSION['lastname'] ?? 'N/A',
+            'email' => $_SESSION['email'] ?? 'N/A',
+            'phone' => $_SESSION['phone'] ?? 'N/A',
+            'city' => $_SESSION['city'] ?? 'N/A',
+            'address' => $_SESSION['home_address'] ?? 'N/A'
         ]);
         ?>;
     </script>

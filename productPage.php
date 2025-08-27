@@ -16,10 +16,10 @@ require_once 'includes/login_view.inc.php'
 
 <body>
     <aside class="js-login-form"></aside>
-    <header></header>
-    <nav></nav>
+    <?php require_once 'bookends/header.php'; ?>
+    <?php require_once 'bookends/nav.php'; ?>
     <main class="js-main-content"></main>
-    <footer></footer>
+    <?php require_once 'bookends/footer.php'; ?>
 </body>
 <script src="scripts/loadBookends.js"></script>
 <script type="module" src="scripts/productLoad.js"></script>

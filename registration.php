@@ -16,10 +16,12 @@ require_once 'includes/signup_view.inc.php';
 </head>
 
 <body>
-    <aside class="js-login-form"></aside>
-    <header></header>
-    <nav></nav>
+    <?php require_once 'bookends/header.php'; ?>
+    <?php require_once 'bookends/nav.php'; ?>
     <section class="register-section">
+        <?php
+        check_signup_errors();
+        ?>
         <div class="register-text">
             <h2>Регистрация</h2>
         </div>
@@ -44,7 +46,7 @@ require_once 'includes/signup_view.inc.php';
             ?>
         </div>
     </section>
-    <footer></footer>
+    <?php require_once 'bookends/footer.php'; ?>
     <script src="scripts/loadBookends.js"></script>
 </body>
 

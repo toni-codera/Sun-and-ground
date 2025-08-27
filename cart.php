@@ -22,9 +22,8 @@ require_once 'includes/login_view.inc.php'
 </head>
 
 <body>
-    <aside class="js-login-form"></aside>
-    <header></header>
-    <nav></nav>
+    <?php require_once 'bookends/header.php'; ?>
+    <?php require_once 'bookends/nav.php'; ?>
     <main class="cart">
         <section class="cart-inventory">
             <div class="cart-header-container">
@@ -57,7 +56,7 @@ require_once 'includes/login_view.inc.php'
             </div>
         </section>
     </main>
-    <footer></footer>
+    <?php require_once 'bookends/footer.php'; ?>
     <script src="scripts/loadBookends.js"></script>
     <script type="module" src="scripts/cart.js"></script>
 </body>

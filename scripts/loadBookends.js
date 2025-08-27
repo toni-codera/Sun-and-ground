@@ -3,7 +3,7 @@ const nav = document.querySelector('nav');
 const footer = document.querySelector('footer');
 const aside = document.querySelector('aside');
 
-header.innerHTML = `
+/*header.innerHTML = `
 <div class="right-side-header">
     <a class="js-logo" href="index.php"><img class="logo-image" src="images/logos/sun-and-ground.png"/></a>
     <a class="js-logo" href="index.php"><h1 class="logo-text">Земя и слънце</h1></a>
@@ -27,9 +27,9 @@ header.innerHTML = `
         </a>
     </div>
 </div>
-`;
+`;*/
 
-nav.innerHTML = `
+/*nav.innerHTML = `
 <ul class="menu">
     <li><a><div class="nav-logo-container"><img src="images/logos/dried-fruits-logo.png" class="nav-logo-img"></div><span>Сушени плодове</span></a>
       <ul class="sub-menu">
@@ -108,9 +108,9 @@ nav.innerHTML = `
       </ul>
     </li>
   </ul>
-`;
+`;*/
 
-footer.innerHTML = `
+/*footer.innerHTML = `
 <div class="footer-container">
     <div class="footer-section">
       <h3>Последвай ни:</h3>
@@ -133,55 +133,7 @@ footer.innerHTML = `
     </div>
 </div>
 `;
-/*aside.innerHTML = `
-<form action="includes/login.inc.php" method="post">
-    <div>
-      <div class="welcome-container">
-        <h1 class="welcome">Добре дошли</h1>
-      </div>
-      <div class="text-container">
-        <span class="text"
-          >Влезте в акаунта си за бързо и сигурно пазаруване</span
-        >
-      </div>
-      <div class="email-container">
-        <input name="email" type="text" class="email" placeholder="Имейл" />
-      </div>
-      <div class="password-container">
-        <input name="pwd" type="password" class="password" placeholder="Парола" />
-      </div>
-      <div class="additional-functions">
-        <div class="remember-container">
-          <input type="checkbox" class="remember-checkbox" />
-          <span class="remember-text">Запомни ме</span>
-        </div>
-        <div class="forgotten-password-container">
-          <a>
-            <span class="forgotten-password-text">Забравена парола</span>
-          </a>
-        </div>
-      </div>
-      <div class="login-container">
-        <button type="submit" class="login">Влез</button>
-      </div>
-    </div>
-    <div>
-      <div class="account-text-container">
-        <h1 class="account-text">Още нямате акаунт?</h1>
-      </div>
-      <div class="register-text-container">
-        <span class="register-button">Регистрирай се сега! </span>
-      </div>
-      <div class="register-container">
-        <a class="register" href="registration.php">Регистрация</a>
-      </div>
-    </div>
-    <div class="login-feedback"><?php
-    check_login_errors();
-    ?></div>
-</form>
-`;*/
-
+*/
 //The black box shown when aside login form pops
 const blackBox = document.createElement('div');
 blackBox.classList.add('js-black-box');
@@ -202,8 +154,8 @@ addStyles('../styles/login.css');
 const loginTrigger = document.querySelector(".js-login-container");
 
 //Shows login form
-loginTrigger.addEventListener("click", () => {
-    /*aside.style.display = 'block';
+/*loginTrigger.addEventListener("click", () => {
+    aside.style.display = 'block';
     aside.style.opacity = '0';
     aside.style.transition = 'opacity 0.1s ease-in';
     setTimeout(() => {
@@ -211,9 +163,9 @@ loginTrigger.addEventListener("click", () => {
     }, 100);
     setTimeout(() => {
         blackBox.classList.add("black-box");
-    }, 100);*/
+    }, 100);
     window.location.href = "login.php";
-});
+});*/
 
 // Function to handle login form exit
 function exitLogin() {

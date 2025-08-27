@@ -8,8 +8,8 @@
     <title>Document</title>
 </head>
 <body>
-    <header></header>
-    <nav></nav>
+    <?php require_once 'bookends/header.php'; ?>
+    <?php require_once 'bookends/nav.php'; ?>
     <div class="info-container">
     <h2>Доставка и Връщане</h2>
 
@@ -26,7 +26,7 @@
     <p>В такива изключителни ситуации, моля, свържете се с нас незабавно (в рамките на 24 часа от получаване на пратката) на [имейл/телефон за връзка], като предоставите номер на поръчка и описание на проблема. Ние ще прегледаме Вашия случай и ще Ви предоставим допълнителни инструкции.</p>
     <p>Връщания, направени по други причини или извън посочените условия, няма да бъдат приемани. Благодарим Ви за разбирането!</p>
     </div>
-    <footer></footer>
+    <?php require_once 'bookends/footer.php'; ?>
     <script src="scripts/loadBookends.js"></script>
 </body>
 </html>

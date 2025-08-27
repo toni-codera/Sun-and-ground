@@ -12,8 +12,8 @@ require_once 'includes/login_view.inc.php'
     <title>Земя и слънце</title>
 </head>
 <body>
-    <header></header>
-    <nav></nav>
+    <?php require_once 'bookends/header.php'; ?>
+    <?php require_once 'bookends/nav.php'; ?>
     <main>
         <form action="includes/login.inc.php" method="post">
             <div>
@@ -60,7 +60,7 @@ require_once 'includes/login_view.inc.php'
             <div class="login-feedback"></div>
         </form>
     </main>
-    <footer></footer>
+    <?php require_once 'bookends/footer.php'; ?>
     <script src="scripts/loadBookends.js"></script>
 </body>
 </html>
