@@ -46,8 +46,8 @@ require_once 'includes/signup_view.inc.php';
             ?>
         </div>
     </section>
-    <?php require_once 'bookends/footer.php'; ?>
-    <script src="scripts/loadBookends.js"></script>
+    <?php require_once '/Sun_and_ground/bookends/footer.php'; ?>
+    <script src="/Sun_and_ground/scripts/loadBookends.js"></script>
 </body>
 
 </html>

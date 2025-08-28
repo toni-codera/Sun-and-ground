@@ -15,8 +15,8 @@
         <div class="footer-section">
         <h3>Политики</h3>
         <ul>
-            <li><a class="polices js-terms" href="#">Условия за ползване &<br> Политика за поверителност</a></li>
-            <li><a class="polices js-delivery" href="#">Доставка и връщане</a></li>
+            <li><a class="polices js-terms" href="/Sun_and_ground/policyAndTerms.php">Условия за ползване &<br> Политика за поверителност</a></li>
+            <li><a class="polices js-delivery" href="/Sun_and_ground/delivery.php">Доставка и връщане</a></li>
         </ul>
         </div>
     </div>

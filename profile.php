@@ -66,5 +66,5 @@ if (!isset($_SESSION["user_id"])) {
         ]);
         ?>;
     </script>
-    <script src="scripts/myProfile.js"></script> </body>
+    <script src="/Sun_and_ground/scripts/myProfile.js"></script> </body>
 </html>

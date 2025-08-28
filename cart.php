@@ -57,8 +57,8 @@ require_once 'includes/login_view.inc.php'
         </section>
     </main>
     <?php require_once 'bookends/footer.php'; ?>
-    <script src="scripts/loadBookends.js"></script>
-    <script type="module" src="scripts/cart.js"></script>
+    <script src="/Sun_and_ground/scripts/loadBookends.js"></script>
+    <script type="module" src="/Sun_and_ground/scripts/cart.js"></script>
 </body>
 
 </html>

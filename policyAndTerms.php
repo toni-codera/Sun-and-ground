@@ -32,6 +32,6 @@
         <p><strong>Бисквитки (Cookies):</strong> Нашият уебсайт използва бисквитки, за да подобри Вашето потребителско изживяване. Бисквитките са малки текстови файлове, които се съхраняват на Вашето устройство. Можете да контролирате използването на бисквитки чрез настройките на Вашия браузър.</p>
     </div>
     <?php require_once 'bookends/footer.php'; ?>
-    <script src="scripts/loadBookends.js"></script>
+    <script src="/Sun_and_ground/scripts/loadBookends.js"></script>
 </body>
 </html>
