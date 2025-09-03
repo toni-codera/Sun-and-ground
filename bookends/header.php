@@ -25,7 +25,7 @@ $is_logged_in = isset($_SESSION["user_id"]);
             </a>
         </div>
         <div class="basket-image-container">
-            <a href="/Sun_and_ground/cart.php">
+            <a href="<?php echo $is_logged_in ? '/Sun_and_ground/cart.php' : '/Sun_and_ground/login.php'; ?>">
                 <img class="basket-image" src="/Sun_and_ground/images/logos/wicker-basket1.png"/>
                 <p class="basket-text">Кошница</p>
             </a>

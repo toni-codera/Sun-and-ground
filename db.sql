@@ -32,7 +32,7 @@ CREATE TABLE product_variations (
     FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
 );
 
-CREATE TABLE cart(
+CREATE TABLE carts(
 	id INT PRIMARY KEY AUTO_INCREMENT,
     user_id INT NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
@@ -44,5 +44,22 @@ CREATE TABLE cart_items (
     product_variation_id INT(11) NOT NULL,
     quantity INT(11) NOT NULL,
     FOREIGN KEY (cart_id) REFERENCES carts(id) ON DELETE CASCADE,
+    FOREIGN KEY (product_variation_id) REFERENCES product_variations(id) ON DELETE CASCADE
+);
+
+CREATE TABLE orders (
+    id INT(11) PRIMARY KEY AUTO_INCREMENT,
+    user_id INT(11) NOT NULL,
+    order_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    is_sent TINYINT(1) NOT NULL DEFAULT 0,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+CREATE TABLE order_items (
+    id INT(11) PRIMARY KEY AUTO_INCREMENT,
+    order_id INT(11) NOT NULL,
+    product_variation_id INT(11) NOT NULL,
+    quantity INT(11) NOT NULL,
+    FOREIGN KEY (order_id) REFERENCES orders(id) ON DELETE CASCADE,
     FOREIGN KEY (product_variation_id) REFERENCES product_variations(id) ON DELETE CASCADE
 );

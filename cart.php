@@ -101,7 +101,9 @@ require_once 'includes/cart.inc.php';
                     <span class="price-total-text">Крайна цена:</span>
                     <span class="price-total-value"><?php echo number_format($total, 2); ?> лв.</span>
                 </div>
-                <button class="complete-shopping-button">Купи</button>
+                <form action="/Sun_and_ground/includes/process_order.inc.php" method="POST">
+                    <button class="complete-shopping-button">Купи</button>
+                </form>
             </div>
         </section>
     </main>
