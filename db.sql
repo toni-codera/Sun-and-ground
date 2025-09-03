@@ -31,3 +31,18 @@ CREATE TABLE product_variations (
     price_cents INT(11) NOT NULL,
     FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
 );
+
+CREATE TABLE cart(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+CREATE TABLE cart_items (
+    id INT(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    cart_id INT(11) NOT NULL,
+    product_variation_id INT(11) NOT NULL,
+    quantity INT(11) NOT NULL,
+    FOREIGN KEY (cart_id) REFERENCES carts(id) ON DELETE CASCADE,
+    FOREIGN KEY (product_variation_id) REFERENCES product_variations(id) ON DELETE CASCADE
+);

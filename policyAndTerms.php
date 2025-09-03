@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/policy_terms_delivery.css">
+    <link rel="icon" type="image/png" href="images/logos/sun-and-ground.png">
     <title>Document</title>
 </head>
 <body>

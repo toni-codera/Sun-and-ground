@@ -9,6 +9,7 @@ require_once 'includes/login_view.inc.php'
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/loginPage.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" type="image/png" href="images/logos/sun-and-ground.png">
     <title>Земя и слънце</title>
 </head>
 <body>

@@ -1,20 +1,34 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', async function() {
     const profileRows = document.querySelectorAll('.profile-row');
     const profileContentSection = document.getElementById('profile-content');
 
-    // Access the userData object globally (defined in profile.php)
+    // Access the userData object globally (defined in profileUser.php)
     // console.log(userData); // You can uncomment this to see the data in your browser console
+    const userData = await(async()=>{
+        try{
+            const response = await fetch('/Sun_and_ground/includes/fetch_profile_data.inc.php');
+            const data = await response.json();
+            if(data.error){
+                console.error(data.error);
+                return {} //empty object return to avoid errors
+            }
+            return data;
+        } catch(error){
+            console.error('Failed to fetch user data:', error);
+            return {}
+        }
+    })();
 
     // Define the content for each section
     const sectionsContent = {
         'personal-info': `
             <h2>Лична информация</h2>
-            <p><strong>Име:</strong> ${userData.firstName}</p>
-            <p><strong>Фамилия:</strong> ${userData.lastName}</p>
+            <p><strong>Име:</strong> ${userData.firstname}</p>
+            <p><strong>Фамилия:</strong> ${userData.lastname}</p>
             <p><strong>Имейл:</strong> ${userData.email}</p>
             <p><strong>Телефон:</strong> ${userData.phone}</p>
             <p><strong>Град:</strong> ${userData.city}</p>
-            <p><strong>Адрес:</strong> ${userData.address}</p>
+            <p><strong>Адрес:</strong> ${userData.home_address}</p>
             <p><em>(Данните по-горе се заредиха от базата данни)</em></p>
         `,
         'my-orders': `
@@ -24,54 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 <li>Поръчка #12345 - Дата: 01.01.2024 - Статус: Изпълнена</li>
                 <li>Поръчка #12346 - Дата: 15.02.2024 - Статус: В обработка</li>
             </ul>
-        `,
-        'change-name': `
-            <h2>Смяна на име</h2>
-            <form action="includes/update_name.php" method="post">
-                <label for="firstName">Ново Първо име:</label>
-                <input type="text" id="firstName" name="firstName" placeholder="Въведете новото си първо име" required>
-                <label for="lastName">Нова Фамилия:</label>
-                <input type="text" id="lastName" name="lastName" placeholder="Въведете новата си фамилия" required>
-                <button type="submit">Запази промените</button>
-            </form>
-        `,
-        'change-password': `
-            <h2>Смяна на парола</h2>
-            <form action="includes/update_password.php" method="post">
-                <label for="currentPwd">Текуща парола:</label>
-                <input type="password" id="currentPwd" name="currentPwd" required>
-                <label for="newPwd">Нова парола:</label>
-                <input type="password" id="newPwd" name="newPwd" required>
-                <label for="confirmNewPwd">Потвърдете нова парола:</label>
-                <input type="password" id="confirmNewPwd" name="confirmNewPwd" required>
-                <button type="submit">Смени паролата</button>
-            </form>
-        `,
-        'change-email': `
-            <h2>Смяна на имейл</h2>
-            <form action="includes/update_email.php" method="post">
-                <label for="newEmail">Нов имейл адрес:</label>
-                <input type="email" id="newEmail" name="newEmail" placeholder="Въведете новия си имейл" required>
-                <button type="submit">Запази промените</button>
-            </form>
-        `,
-        'change-address': `
-            <h2>Смяна на адрес</h2>
-            <form action="includes/update_address.php" method="post">
-                <label for="newCity">Нов Град:</label>
-                <input type="text" id="newCity" name="newCity" placeholder="Въведете новия си град" required>
-                <label for="newHomeAddress">Нов Домашен Адрес:</label>
-                <input type="text" id="newHomeAddress" name="newHomeAddress" placeholder="Въведете новия си адрес" required>
-                <button type="submit">Запази промените</button>
-            </form>
-        `,
-        'change-phone': `
-            <h2>Смяна на телефон</h2>
-            <form action="includes/update_phone.php" method="post">
-                <label for="newPhone">Нов Телефонен Номер:</label>
-                <input type="tel" id="newPhone" name="newPhone" placeholder="Въведете новия си телефон" required>
-                <button type="submit">Запази промените</button>
-            </form>
         `,
         'logout': `
             <h2>Изход от профила</h2>

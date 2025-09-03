@@ -12,6 +12,7 @@ require_once 'includes/signup_view.inc.php';
     <link rel="stylesheet" href="styles/registration.css" />
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/login.css" />
+    <link rel="icon" type="image/png" href="images/logos/sun-and-ground.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 

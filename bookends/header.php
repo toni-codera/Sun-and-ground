@@ -1,9 +1,8 @@
 <?php
-// CRITICAL: Include the session config file to make $_SESSION data available.
+//Include the session config file to make $_SESSION data available.
 require_once __DIR__ . '/../includes/config_session.inc.php'; 
 
-// This header assumes config_session.inc.php is included on the main page.
-// We check if the user_id session variable is set to determine login status.
+//Check if the user_id session variable is set to determine login status.
 $is_logged_in = isset($_SESSION["user_id"]);
 ?>
 <header>
@@ -20,7 +19,7 @@ $is_logged_in = isset($_SESSION["user_id"]);
             </div>
         </div>
         <div class="profile-image-container">
-            <a href="<?php echo $is_logged_in ? '/Sun_and_ground/profile.php' : '/Sun_and_ground/login.php'; ?>">
+            <a href="<?php echo $is_logged_in ? '/Sun_and_ground/profileUser.php' : '/Sun_and_ground/login.php'; ?>">
                 <img class="profile-image" src="/Sun_and_ground/images/logos/farmer.png" />
                 <p class="login-text"><?php echo $is_logged_in ? 'Профил' : 'Вход/Регистрация'; ?></p>
             </a>
