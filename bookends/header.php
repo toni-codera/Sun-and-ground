@@ -4,6 +4,7 @@ require_once __DIR__ . '/../includes/config_session.inc.php';
 
 //Check if the user_id session variable is set to determine login status.
 $is_logged_in = isset($_SESSION["user_id"]);
+$is_admin = isset($_SESSION["is_admin"]) && $_SESSION["is_admin"] === 1;
 ?>
 <header>
     <div class="right-side-header">
@@ -19,7 +20,15 @@ $is_logged_in = isset($_SESSION["user_id"]);
             </div>
         </div>
         <div class="profile-image-container">
-            <a href="<?php echo $is_logged_in ? '/Sun_and_ground/profileUser.php' : '/Sun_and_ground/login.php'; ?>">
+            <a href="<?php
+                if ($is_admin) {
+                    echo '/Sun_and_ground/profileAdmin.php';
+                } else if ($is_logged_in) {
+                    echo '/Sun_and_ground/profileUser.php';
+                } else {
+                    echo '/Sun_and_ground/login.php';
+                }
+            ?>">
                 <img class="profile-image" src="/Sun_and_ground/images/logos/farmer.png" />
                 <p class="login-text"><?php echo $is_logged_in ? 'Профил' : 'Вход/Регистрация'; ?></p>
             </a>

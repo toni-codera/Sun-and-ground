@@ -32,7 +32,7 @@ require_once 'includes/login_view.inc.php'
                 <div class="password-container">
                     <input name="pwd" type="password" class="password" placeholder="Парола" />
                 </div>
-                <div class="additional-functions">
+                <!--<div class="additional-functions">
                         <div class="remember-container">
                         <input type="checkbox" class="remember-checkbox" />
                         <span class="remember-text">Запомни ме</span>
@@ -42,7 +42,7 @@ require_once 'includes/login_view.inc.php'
                             <span class="forgotten-password-text">Забравена парола</span>
                         </a>
                         </div>
-                </div>
+                </div>-->
                 <div class="login-container">
                     <button type="submit" class="login">Влез</button>
                 </div>

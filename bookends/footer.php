@@ -2,7 +2,23 @@
     <div class="footer-container">
         <div class="footer-section">
         <h3>Последвай ни:</h3>
-        <div></div>
+        <div class="social-media">
+            <a class="social-media-icon" href="https://www.facebook.com" target="_blank">
+                <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+            <a class="social-media-icon" href="https://www.instagram.com" target="_blank">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a class="social-media-icon" href="https://www.youtube.com" target="_blank">
+                <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+            <a class="social-media-icon" href="https://www.x.com" target="_blank">
+                    <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+            <a class="social-media-icon" href="https://www.tiktok.com" target="_blank">
+                    <ion-icon name="logo-tiktok"></ion-icon>
+            </a>
+        </div>
         </div>
         <div class="footer-section">
         <h3>Контакти</h3>
@@ -21,3 +37,5 @@
         </div>
     </div>
 </footer>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

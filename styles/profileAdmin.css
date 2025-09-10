@@ -1,0 +1,126 @@
+/* General Styling for Admin Page */
+body {
+    background-color: #f4f4f4;
+}
+
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-orders-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.admin-orders h2 {
+    color: #333;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.logout-admin-button{
+    padding: 12px 18px;
+    background-color: #dc3545;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.logout-admin-button:hover{
+    background-color: #c92f3f;
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 40px 0;
+}
+
+/* Order Cards - The Main Layout */
+.orders-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.order-card {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    gap: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Columns within the card */
+.order-products-column,
+.order-user-column,
+.order-action-column {
+    padding: 10px;
+}
+
+.order-products-column h3,
+.order-user-column h3,
+.order-action-column h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #555;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.order-user-column p,
+.order-products-column p,
+.order-action-column p {
+    margin: 5px 0;
+}
+
+/* Mark as Sent Button */
+.mark-sent-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.mark-sent-button:hover {
+    background-color: #45a049;
+}
+
+.mark-sent-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Styling for Sent Orders */
+.order-card.sent {
+    background-color: #e0f2f1;
+    border-color: #b2dfdb;
+}
+
+.order-card.sent .mark-sent-button {
+    background-color: #b2dfdb;
+    color: #4CAF50;
+}

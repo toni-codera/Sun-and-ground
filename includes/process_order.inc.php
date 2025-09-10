@@ -26,7 +26,7 @@ try {
     $cart_id = $stmt->fetchColumn();
 
     if (!$cart_id) {
-        echo "Your cart is empty.";
+        echo "<script>alert('Количката е празна'); window.location.href='/Sun_and_ground/index.php';</script>";
         exit();
     }
 
@@ -38,7 +38,7 @@ try {
     $cart_items = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     if (empty($cart_items)) {
-        echo "Your cart is empty.";
+        echo "<script>alert('Количката е празна'); window.location.href='/Sun_and_ground/index.php';</script>";
         exit();
     }
 
@@ -71,7 +71,6 @@ try {
 
     // If all queries were successful, commit the transaction
     $pdo->commit();
-
     // Redirect the user to an order confirmation or profile page
     header("Location: /Sun_and_ground/index.php");
     exit();
@@ -80,5 +79,5 @@ try {
     // If anything fails, roll back the transaction
     $pdo->rollBack();
     error_log("Order processing failed: " . $e->getMessage());
-    echo "An error occurred while processing your order. Please try again.";
+    echo "Възникна грешка при обработката на вашата поръчка. Опитайте отново.";
 }

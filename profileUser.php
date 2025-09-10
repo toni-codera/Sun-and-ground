@@ -1,4 +1,5 @@
 <?php
+
 require_once 'includes/config_session.inc.php';
 // Check if user is logged in, redirect if not
 if (!isset($_SESSION["user_id"])) {

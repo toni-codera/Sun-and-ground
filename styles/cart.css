@@ -159,3 +159,49 @@
     cursor: pointer;
     margin-top: 20px;
 }
+
+
+/* New styles for the confirmation buttons */
+.confirmation-container {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.confirmation-container p {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.confirm-yes-button,
+.confirm-no-button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.confirm-yes-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.confirm-yes-button:hover {
+    background-color: #45a049;
+}
+
+.confirm-no-button {
+    background-color: #f44336;
+    color: white;
+}
+
+.confirm-no-button:hover {
+    background-color: #d32f2f;
+}
+
+/* Class to hide and show the container */
+.hidden {
+    display: none;
+}

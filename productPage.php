@@ -1,6 +1,6 @@
 <?php
 // This file is the View. It presents the data fetched by the model.
-require_once 'includes/product.inc.php';
+require_once 'includes/product_model.inc.php';
 ?>
 <!DOCTYPE html>
 <html>
