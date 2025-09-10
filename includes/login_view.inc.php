@@ -9,12 +9,11 @@ function check_login_errors()
         echo "<br>";
 
         foreach ($errors as $error) {
-            echo "<p>Failed : " . $error . "</p>";
+            echo "<p style='color: red; margin-bottom:10px'>Грешка : " . $error . "</p>";
         }
         unset($_SESSION["errors_login"]);
     } else if (isset($_GET['login']) && $_GET['login'] === "success") {
         echo "<br>";
-        echo '<p style="margin-top:20px; font-weight:bold; color:green; 
-        text-align:center;">Successful login!</p>';
+        echo '<p>Успешно влизане!</p>';
     }
 }

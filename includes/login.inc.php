@@ -14,22 +14,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $errors = [];
         //if the inputs are empty
         if (is_input_empty($email, $pwd)) {
-            $errors["empty_input"] = "Fill in all fields";
-        }
+            $errors["empty_input"] = "Попълнете всички полета";
+        }else{
 
-        $result = get_user($pdo, $email);
-        //if the email is wrong/unexisting
-        if (is_email_wrong($result)) {
-            $errors["login_incorrect"] = "Incorrect login information!";
+            $result = get_user($pdo, $email);
+            //if the email is wrong/unexisting
+            if (!$result || !password_verify($pwd, $result["pwd"])) {
+                $errors["login_incorrect"] = "Грешнен имейл или парола!";
         }
-
-        //if the email is correct but the password is wrong
-        if (
-            !is_email_wrong($result) &&
-            is_password_wrong($pwd, $result["pwd"])
-        ) {
-            $errors["login_incorrect"] = "Incorrect password!";
-        }
+}
 
 
         //grabs our session config file

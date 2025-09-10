@@ -33,17 +33,18 @@ async function addToCart(productVariationId) {
         const response = await fetch('/Sun_and_ground/includes/cart.inc.php', {
             method: 'POST',
             body: formData,
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest' // Add this header
+            }
         });
 
-        // This is the key part that handles unauthenticated users
         if (!response.ok) {
             if (response.status === 401) {
-                // This line will trigger the PHP redirect to login.php
-                // for the main page, not for the AJAX request.
-                location.reload(); 
+                alert("Трябва да сте влезли в профила си, за да добавите продукти в количката."); 
+                window.location.href = '/Sun_and_ground/login.php';
                 return;
             }
-            throw new Error(`HTTP error! status: ${response.status}`);
+            throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
         const result = await response.json();

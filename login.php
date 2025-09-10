@@ -21,6 +21,9 @@ require_once 'includes/login_view.inc.php'
                 <div class="welcome-container">
                     <h1 class="welcome">Добре дошли</h1>
                 </div>
+                <div class="login-feedback">
+                <?php check_login_errors(); ?>
+                </div>
                 <div class="text-container">
                     <span class="text"
                     >Влезте в акаунта си за бързо и сигурно пазаруване</span

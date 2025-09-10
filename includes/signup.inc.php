@@ -49,9 +49,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if (is_phone_invalid($phone)) {
             $errors["invalid_phone"] = "Невалиден телефонен номер!";
         }
-        if (is_phone_registered($pdo, $phone)) {
+        /*if (is_phone_registered($pdo, $phone)) {
             $errors["phone_registered"] = "Телефонния номер е регистриран!";
-        }
+        }*/
 
         require_once 'config_session.inc.php';
 
