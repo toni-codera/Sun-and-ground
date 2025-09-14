@@ -10,7 +10,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         require_once 'login_model.inc.php';
         require_once 'login_contr.inc.php';
 
-        //ERROR HANDLERS
         $errors = [];
         //if the inputs are empty
         if (is_input_empty($email, $pwd)) {
@@ -36,7 +35,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
         //generate new session id
         //we can append the user's id with the session id
-        //this is useful to show specific info for the logged in user
         $newSessionId = session_create_id();
         $sessionId = $newSessionId . "_" . $result["id"];
         session_id($sessionId);

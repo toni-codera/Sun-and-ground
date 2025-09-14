@@ -1,20 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Existing event listeners for cart items
     attachCartItemEventListeners();
 
-    // New logic for order confirmation buttons
     const confirmOrderButton = document.getElementById('confirm-order-button');
     const confirmationContainer = document.getElementById('confirmation-container');
     const confirmNoButton = document.querySelector('.confirm-no-button');
 
     if (confirmOrderButton && confirmationContainer && confirmNoButton) {
-        // Show confirmation on "Купи" button click
         confirmOrderButton.addEventListener('click', () => {
             confirmationContainer.classList.remove('hidden');
             confirmOrderButton.classList.add('hidden');
         });
 
-        // Hide confirmation on "Не" button click
         confirmNoButton.addEventListener('click', () => {
             confirmationContainer.classList.add('hidden');
             confirmOrderButton.classList.remove('hidden');

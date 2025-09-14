@@ -1,20 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Attach event listeners after the DOM is fully loaded
     attachAddToCartEventListeners();
 });
 
 function attachAddToCartEventListeners() {
-    // Find the "Add to Cart" button
     const addToCartButton = document.querySelector('.add-to-cart');
 
-    // If the button exists, attach a click event listener
     if (addToCartButton) {
         addToCartButton.addEventListener('click', async () => {
-            // Get the selected product variation ID from a hidden input or data attribute
-            // You might need to adjust this selector based on your HTML
             const selectedVariation = document.querySelector('input[name="option"]:checked');
             if (!selectedVariation) {
-                alert('Моля, изберете вариант на продукта.'); // Please select a product variation.
+                alert('Моля, изберете вариант на продукта.'); 
                 return;
             }
             const productVariationId = selectedVariation.value;
@@ -34,7 +29,7 @@ async function addToCart(productVariationId) {
             method: 'POST',
             body: formData,
             headers: {
-                'X-Requested-With': 'XMLHttpRequest' // Add this header
+                'X-Requested-With': 'XMLHttpRequest'
             }
         });
 

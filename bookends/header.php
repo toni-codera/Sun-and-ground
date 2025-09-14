@@ -1,8 +1,6 @@
 <?php
-//Include the session config file to make $_SESSION data available.
 require_once __DIR__ . '/../includes/config_session.inc.php'; 
 
-//Check if the user_id session variable is set to determine login status.
 $is_logged_in = isset($_SESSION["user_id"]);
 $is_admin = isset($_SESSION["is_admin"]) && $_SESSION["is_admin"] === 1;
 ?>

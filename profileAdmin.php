@@ -1,11 +1,9 @@
 <?php
 require_once __DIR__ . '/includes/config_session.inc.php';
-// Check for admin access, redirect if not an admin
 if (!isset($_SESSION["user_id"]) || $_SESSION["is_admin"] !== 1) {
     header("Location: /Sun_and_ground/index.php");
     exit();
 }
-// Get all orders from the database using the new file
 require_once __DIR__ . '/includes/admin_fetch_orders.inc.php';
 $orders = admin_fetch_orders();
 ?>
@@ -120,5 +118,6 @@ $orders = admin_fetch_orders();
             </div>
         </section>
     </main>
+    <script src="/Sun_and_ground/scripts/navigate.js"></script>
 </body>
 </html>

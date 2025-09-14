@@ -1,4 +1,3 @@
-/* General Styling for Admin Page */
 body {
     background-color: #f4f4f4;
 }
@@ -48,7 +47,6 @@ main {
     margin: 40px 0;
 }
 
-/* Order Cards - The Main Layout */
 .orders-container {
     display: flex;
     flex-wrap: wrap;
@@ -68,7 +66,7 @@ main {
     box-sizing: border-box;
 }
 
-/* Columns within the card */
+
 .order-products-column,
 .order-user-column,
 .order-action-column {
@@ -92,7 +90,6 @@ main {
     margin: 5px 0;
 }
 
-/* Mark as Sent Button */
 .mark-sent-button {
     background-color: #4CAF50;
     color: white;
@@ -114,7 +111,6 @@ main {
     cursor: not-allowed;
 }
 
-/* Styling for Sent Orders */
 .order-card.sent {
     background-color: #e0f2f1;
     border-color: #b2dfdb;

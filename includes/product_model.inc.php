@@ -46,13 +46,11 @@ $stmt->bindParam(":product_id", $product_id, PDO::PARAM_INT);
 $stmt->execute();
 $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-// If no product is found, redirect the user back to the homepage.
 if (!$data) {
     header('Location: index.php');
     exit();
 }
 
-// Group the variations under the main product details.
 $product = [
     'name' => $data[0]['product_name'],
     'category' => $data[0]['category'],
@@ -71,7 +69,7 @@ foreach ($data as $row) {
         'price_cents' => $row['price_cents']
     ];
 }
-// Helper function to format weight
+
 function formatQuantity($weight) {
     if ($weight < 1000) {
         return $weight . " гр.";
@@ -79,7 +77,6 @@ function formatQuantity($weight) {
     return number_format($weight / 1000, 1) . " кг.";
 }
 
-// Helper function to format price
 function formatCurrency($priceCents) {
     return number_format($priceCents / 100, 2) . " лв.";
 }

@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', async function() {
         }
     })();
 
-    // Function to render orders
     async function renderOrders() {
         profileContentSection.innerHTML = '<h2>Моите поръчки</h2><p>Зарежда се...</p>';
         try {
@@ -32,7 +31,7 @@ document.addEventListener('DOMContentLoaded', async function() {
             if (orders.length === 0) {
                 profileContentSection.innerHTML = `<h2>Моите поръчки</h2><p>Нямате минали поръчки.</p>`;
             } else {
-                const deliveryFee = 5.00; // Define the delivery fee here
+                const deliveryFee = 5.00;
                 let ordersHtml = '<h2>Моите поръчки</h2>';
                 
                 orders.forEach(order => {
@@ -91,7 +90,6 @@ document.addEventListener('DOMContentLoaded', async function() {
         }
     }
 
-    // Function to load content
     function loadContent(target) {
         if (target === 'my-orders') {
             renderOrders();
@@ -117,13 +115,11 @@ document.addEventListener('DOMContentLoaded', async function() {
         }
     }
 
-    // Function to set active class
     function setActiveRow(clickedRow) {
         profileRows.forEach(row => row.classList.remove('active'));
         clickedRow.classList.add('active');
     }
 
-    // Add click event listeners to all profile rows
     profileRows.forEach(row => {
         row.addEventListener('click', function() {
             const target = this.dataset.target;
@@ -132,7 +128,6 @@ document.addEventListener('DOMContentLoaded', async function() {
         });
     });
 
-    // Load default content on page load
     const defaultTarget = document.querySelector('.profile-row.active').dataset.target;
     loadContent(defaultTarget);
 });

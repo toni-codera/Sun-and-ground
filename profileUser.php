@@ -1,7 +1,6 @@
 <?php
 
 require_once 'includes/config_session.inc.php';
-// Check if user is logged in, redirect if not
 if (!isset($_SESSION["user_id"])) {
     header("Location: login.php");
     die();
@@ -44,5 +43,6 @@ if (!isset($_SESSION["user_id"])) {
     </main>
     <?php require_once 'bookends/footer.php'; ?>
     <script src="/Sun_and_ground/scripts/myProfile.js"></script> 
+    <script src="/Sun_and_ground/scripts/navigate.js"></script>
 </body>
 </html>

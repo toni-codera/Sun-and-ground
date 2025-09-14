@@ -17,7 +17,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         //require_once 'signup_view.inc.php';
         require_once 'signup_contr.inc.php';
 
-        //ERROR HANDLERS
         $errors = [];
         if (is_input_empty($firstname, $lastname, $pwd, $pwd_repeat, $email, $city, $home_address, $phone)) {
             $errors["empty_input"] = "Попълнете всички полета!";
@@ -49,9 +48,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if (is_phone_invalid($phone)) {
             $errors["invalid_phone"] = "Невалиден телефонен номер!";
         }
-        /*if (is_phone_registered($pdo, $phone)) {
-            $errors["phone_registered"] = "Телефонния номер е регистриран!";
-        }*/
 
         require_once 'config_session.inc.php';
 

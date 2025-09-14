@@ -1,38 +1,38 @@
         body {
-            background-color: #FBF9F3; /* Ensure consistent background */
-            font-family: Roboto, Arial, sans-serif; /* Consistent font */
+            background-color: #FBF9F3;
+            font-family: Roboto, Arial, sans-serif;
             color: #333;
         }
 
         .info-container {
-            width: 70%; /* Slightly wider than profile page main for content */
+            width: 70%;
             margin: 20px auto;
-            padding: 30px; /* More padding for readability */
+            padding: 30px;
             background-color: #fff;
-            border: solid 1px #ccc; /* Lighter border than main */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Subtle shadow */
-            line-height: 1.6; /* Improved readability */
-            font-size: 1.1em; /* Make text a little bit bigger */
+            border: solid 1px #ccc;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05); 
+            line-height: 1.6; 
+            font-size: 1.1em; 
         }
 
         .info-container h1 {
-            color: #704525; /* Your brown color for main title */
+            color: #704525;
             text-align: center;
             margin-bottom: 40px;
-            font-size: clamp(24px, 4vw, 36px); /* Responsive heading */
+            font-size: clamp(24px, 4vw, 36px);
         }
 
         .info-container h2 {
-            color: #40A944; /* Your green color for section titles */
+            color: #40A944;
             margin-top: 30px;
             margin-bottom: 15px;
-            font-size: clamp(20px, 3vw, 30px); /* Responsive sub-heading */
-            border-bottom: 2px solid #eee; /* Subtle underline */
+            font-size: clamp(20px, 3vw, 30px);
+            border-bottom: 2px solid #eee;
             padding-bottom: 5px;
         }
 
         .info-container h3 {
-            color: #704525; /* Your brown for sub-sub headings */
+            color: #704525;
             margin-top: 20px;
             margin-bottom: 10px;
             font-size: clamp(18px, 2.5vw, 24px);
@@ -41,7 +41,7 @@
         .info-container p,
         .info-container ul {
             margin-bottom: 15px;
-            font-size: clamp(14px, 1.2vw, 18px); /* Ensure body text is responsive and >= 14px */
+            font-size: clamp(14px, 1.2vw, 18px); 
         }
 
         .info-container ul {
@@ -49,10 +49,9 @@
             margin-left: 20px;
         }
 
-        /* Basic responsiveness for smaller screens */
         @media (max-width: 768px) {
             .info-container {
-                width: 95%; /* Wider on small screens */
+                width: 95%;
                 padding: 20px;
             }
         }

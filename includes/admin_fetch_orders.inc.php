@@ -5,7 +5,7 @@ declare(strict_types=1);
 require_once 'dbh.inc.php';
 require_once 'config_session.inc.php';
 
-// Only allow admin access to this page
+// only allow admin access to this page
 if (!isset($_SESSION["user_id"]) || $_SESSION["is_admin"] !== 1) {
     http_response_code(403);
     echo "Forbidden: You do not have permission to view this page.";
@@ -13,9 +13,8 @@ if (!isset($_SESSION["user_id"]) || $_SESSION["is_admin"] !== 1) {
 }
 
 function admin_fetch_orders() {
-    global $pdo; // Make the PDO connection available inside the function
+    global $pdo; 
     try {
-        // Fetch all orders with user and product information
         $query = "
             SELECT 
                 o.id AS order_id, 
@@ -43,7 +42,6 @@ function admin_fetch_orders() {
         $stmt->execute();
         $all_orders = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        // Group items by order ID for a cleaner structure
         $grouped_orders = [];
         foreach ($all_orders as $item) {
             $order_id = $item['order_id'];

@@ -114,5 +114,6 @@ require_once 'includes/cart.inc.php';
     </main>
     <?php require_once 'bookends/footer.php'; ?>
     <script type="module" src="/Sun_and_ground/scripts/cart.js"></script>
+    <script src="/Sun_and_ground/scripts/navigate.js"></script>
 </body>
 </html>

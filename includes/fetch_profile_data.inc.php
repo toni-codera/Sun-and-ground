@@ -21,5 +21,4 @@ if($userData){
 }else {
     echo json_encode(['error' => 'User data not found!']);
 }
-
 ?>

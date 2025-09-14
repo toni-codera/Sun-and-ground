@@ -4,7 +4,6 @@ declare(strict_types = 1);
 require_once 'config_session.inc.php';
 require_once 'dbh.inc.php';
 
-// This is the critical block that prevents the error
 if (!isset($_SESSION["user_id"])) {
     if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest') {
         http_response_code(401);
@@ -17,7 +16,6 @@ if (!isset($_SESSION["user_id"])) {
 }
 $user_id = $_SESSION["user_id"];
 
-// All database-related functions
 function get_cart_items(PDO $pdo, int $user_id): array
 {
     $query = "SELECT 
@@ -90,7 +88,6 @@ function get_or_create_cart_db(PDO $pdo, int $user_id): int
     }
 }
 
-// All business logic-related functions
 function calculate_cart_totals(array $cart_items): array
 {
     $subtotal = 0;
@@ -108,7 +105,6 @@ function calculate_cart_totals(array $cart_items): array
     ];
 }
 
-// Handle AJAX POST requests
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
     header('Content-Type: application/json');
     $action = $_POST['action'];
@@ -125,7 +121,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
                     $success = add_to_cart_db($pdo, $cart_id, $product_variation_id, $quantity);
                     $response['success'] = $success;
                 } else {
-                    $response['error'] = 'Missing product variation ID.';
+                    $response['error'] = 'Липсва ид за опция на продукта';
                 }
                 break;
             case 'update_quantity':
@@ -135,7 +131,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
                     $success = update_cart_quantity_db($pdo, $cart_item_id, $cart_id, $new_quantity);
                     $response['success'] = $success;
                 } else {
-                    $response['error'] = 'Missing cart item ID or quantity.';
+                    $response['error'] = 'Липсва ид на кошницата или количеството на продукта';
                 }
                 break;
             case 'delete':
@@ -144,15 +140,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
                     $success = delete_cart_item_db($pdo, $cart_item_id, $cart_id);
                     $response['success'] = $success;
                 } else {
-                    $response['error'] = 'Missing cart item ID.';
+                    $response['error'] = 'Липсва ид на продукта';
                 }
                 break;
             default:
-                $response['error'] = 'Invalid action.';
+                $response['error'] = 'Непразпознато действие';
                 break;
         }
     } catch (PDOException $e) {
-        $response['error'] = 'Database error: ' . $e->getMessage();
+        $response['error'] = 'Грешка в базата данни: ' . $e->getMessage();
     }
     
     echo json_encode($response);

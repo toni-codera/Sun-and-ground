@@ -1,5 +1,4 @@
 <?php
-// This file is the View. It presents the data fetched by the model.
 require_once 'includes/product_model.inc.php';
 ?>
 <!DOCTYPE html>
@@ -48,14 +47,13 @@ require_once 'includes/product_model.inc.php';
                     <?php endforeach; ?>
                 </div>
                 <div class="processing">
-                    <button class="add-to-cart" data-product-id="<?php echo $product_id; ?>">Добави в количката</button>
-                    <button class="buy-now">Купи сега</button>
+                    <button class="add-to-cart" data-product-id="<?php echo $product_id; ?>">Добави в кошницата</button>
                 </div>
             </div>
         </article>
     </main>
     <?php require_once 'bookends/footer.php'; ?>
 </body>
-<script src="/Sun_and_ground/scripts/loadBookends.js"></script>
+<script src="/Sun_and_ground/scripts/navigate.js"></script>
 <script src="/Sun_and_ground/scripts/productLoad.js"></script>
 </html>

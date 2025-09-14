@@ -85,15 +85,6 @@ function is_home_address_invalid(string $home_address)
     return false;
 }
 
-/*function is_phone_registered(object $pdo, string $phone)
-{
-    if (get_phone($pdo, $phone)) {
-        return true;
-    } else {
-        return false;
-    }
-}
-*/
 function is_phone_invalid(string $phone)
 {
     if (!preg_match("/^[\d\s\-\+]{7,15}$/", $phone)) {

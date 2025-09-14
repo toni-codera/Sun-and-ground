@@ -91,7 +91,7 @@ require_once 'includes/login_view.inc.php';
         </article>
     </section>
     <?php require_once 'bookends/footer.php';?>
-    <script src="scripts/loadBookends.js"></script>
+    <script src="/Sun_and_ground/scripts/navigate.js"></script>
 </body>
 
 </html>

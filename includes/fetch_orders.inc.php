@@ -5,9 +5,9 @@ declare(strict_types=1);
 require_once 'config_session.inc.php';
 require_once 'dbh.inc.php';
 
-// Check if the user is logged in
+// is the user logged in
 if (!isset($_SESSION["user_id"])) {
-    http_response_code(401); // Unauthorized
+    http_response_code(401); 
     echo json_encode(['error' => 'User not logged in.']);
     exit();
 }
@@ -15,7 +15,7 @@ if (!isset($_SESSION["user_id"])) {
 $user_id = $_SESSION["user_id"];
 
 try {
-    // Fetch all orders for the user
+    // fetch all orders for the user
     $query = "
         SELECT
             o.id AS order_id,
@@ -39,7 +39,7 @@ try {
     $stmt->execute();
     $orders = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    // Group items by order ID for a cleaner structure
+    // group items by order id
     $grouped_orders = [];
     foreach ($orders as $item) {
         $order_id = $item['order_id'];
@@ -65,5 +65,5 @@ try {
 
 } catch (PDOException $e) {
     http_response_code(500);
-    echo json_encode(['error' => 'Database error: ' . $e->getMessage()]);
+    echo json_encode(['error' => 'Грешка в базата данни: ' . $e->getMessage()]);
 }

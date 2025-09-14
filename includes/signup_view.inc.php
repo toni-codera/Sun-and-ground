@@ -62,6 +62,7 @@ function signup_inputs()
         <div class="row">
             <div class="informer">
                 <span>Парола</span>
+                <p class = "password-criteria"><i>Паролата трябва бъде с дължина от 8 знака, като трябва да се съдържа поне енда, главна буква малка буква, знак и цифра</i></p>
             </div>
             <div class="box">
                 <input name="pwd" type="password" class="register-password" />

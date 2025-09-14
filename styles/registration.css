@@ -113,3 +113,9 @@ hr {
 .signup-error{
     color: red;
 }
+.password-criteria{
+    font-size: 10px;
+    width: 20vw;
+    margin-top: 10px;
+    color: gray;
+}
