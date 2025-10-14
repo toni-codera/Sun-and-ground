@@ -6,12 +6,12 @@ $is_admin = isset($_SESSION["is_admin"]) && $_SESSION["is_admin"] === 1;
 ?>
 <header>
     <div class="right-side-header">
-        <a class="js-logo" href="/Sun_and_ground/index.php"><img class="logo-image" src="/Sun_and_ground/images/logos/sun-and-ground.png"/></a>
+        <a class="js-logo" href="/Sun_and_ground/index.php"><img class="logo-image" src="/Sun_and_ground/images/logos/sun-and-ground.png" alt="Не можа да се зареди изображението"/></a>
         <a class="js-logo" href="/Sun_and_ground/index.php"><h1 class="logo-text">Земя и слънце</h1></a>
     </div>
     <div class="left-side-header">
         <div class="phone-image-container">
-            <img class="phone-image" src="/Sun_and_ground/images/logos/phone-call.png" />
+            <img class="phone-image" src="/Sun_and_ground/images/logos/phone-call.png" alt="Не можа да се зареди изображението"/>
             <div class="phone-number">
                 <p>Телефон:</p>
                 <p> 0895229715</p>
@@ -27,13 +27,13 @@ $is_admin = isset($_SESSION["is_admin"]) && $_SESSION["is_admin"] === 1;
                     echo '/Sun_and_ground/login.php';
                 }
             ?>">
-                <img class="profile-image" src="/Sun_and_ground/images/logos/farmer.png" />
+                <img class="profile-image" src="/Sun_and_ground/images/logos/farmer.png" alt="Не можа да се зареди изображението"/>
                 <p class="login-text"><?php echo $is_logged_in ? 'Профил' : 'Вход/Регистрация'; ?></p>
             </a>
         </div>
         <div class="basket-image-container">
             <a href="<?php echo $is_logged_in ? '/Sun_and_ground/cart.php' : '/Sun_and_ground/login.php'; ?>">
-                <img class="basket-image" src="/Sun_and_ground/images/logos/wicker-basket1.png"/>
+                <img class="basket-image" src="/Sun_and_ground/images/logos/wicker-basket1.png" alt="Не можа да се зареди изображението"/>
                 <p class="basket-text">Кошница</p>
             </a>
         </div>

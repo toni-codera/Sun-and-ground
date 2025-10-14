@@ -24,7 +24,7 @@ require_once 'includes/login_view.inc.php';
     <?php require_once 'bookends/nav.php';?>
     <section class="js-main-content">
         <article>
-            <img class="farm-back-image" src="images/others/back.jpg" />
+            <img class="farm-back-image" src="images/others/back.jpg" alt="Не можа да се зареди изображението" />
         </article>
         <article>
             <div class="about-container">
@@ -43,7 +43,7 @@ require_once 'includes/login_view.inc.php';
                 <div class="starting-date">
                     <p class="from">OT</p>
                     <div class="about-image-box">
-                        <img class="logo-in-about" src="images/logos/sun-and-ground.png" />
+                        <img class="logo-in-about" src="images/logos/sun-and-ground.png" alt="Не можа да се зареди изображението" />
                     </div>
                     <p class="year">2001</p>
                 </div>
@@ -56,7 +56,7 @@ require_once 'includes/login_view.inc.php';
                         Нашите млечни продукти са благодарение на <br />
                         свободно отглежданите ни и щастливи крави.
                     </span>
-                    <img class="dairy-products" src="images/others/dairy_products.png" />
+                    <img class="dairy-products" src="images/others/dairy_products.png" alt="Не можа да се зареди изображението" />
                 </div>
             </div>
         </article>
@@ -67,23 +67,23 @@ require_once 'includes/login_view.inc.php';
                 </div>
                 <div class="actions-container">
                     <div class="farming">
-                        <img class="action-image" src="images/logos/farming.png" />
+                        <img class="action-image" src="images/logos/farming.png" alt="Не можа да се зареди изображението" />
                         <p>Производство</p>
                     </div>
                     <div class="processing">
-                        <img class="action-image" src="images/logos/processing.png" />
+                        <img class="action-image" src="images/logos/processing.png" alt="Не можа да се зареди изображението" />
                         <p>Преработка</p>
                     </div>
                     <div class="packaging">
-                        <img class="action-image" src="images/logos/packaging.png" />
+                        <img class="action-image" src="images/logos/packaging.png" alt="Не можа да се зареди изображението" />
                         <p>Опаковане</p>
                     </div>
                     <div class="distribution">
-                        <img class="action-image" src="images/logos/distribution.png" />
+                        <img class="action-image" src="images/logos/distribution.png" alt="Не можа да се зареди изображението" />
                         <p>Доставка</p>
                     </div>
                     <div class="marketing">
-                        <img class="action-image" src="images/logos/marketing.png" />
+                        <img class="action-image" src="images/logos/marketing.png" alt="Не можа да се зареди изображението" />
                         <p>Маркетинг</p>
                     </div>
                 </div>

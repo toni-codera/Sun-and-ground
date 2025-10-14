@@ -1,6 +1,6 @@
 <nav>
     <ul class="menu">
-        <li><a><div class="nav-logo-container"><img src="/Sun_and_ground/images/logos/dried-fruits-logo.png" class="nav-logo-img"></div><span>Сушени плодове</span></a>
+        <li><a><div class="nav-logo-container"><img src="/Sun_and_ground/images/logos/dried-fruits-logo.png" alt="Не можа да се зареди изображението" class="nav-logo-img"></div><span>Сушени плодове</span></a>
             <ul class="sub-menu">
                 <li><a class="product" data-id="1" href="/Sun_and_ground/productPage/1">Ягоди</a></li>
                 <li><a class="product" data-id="2" href="/Sun_and_ground/productPage/2">Малини</a></li>
@@ -15,14 +15,14 @@
                 <li><a class="product" data-id="11" href="/Sun_and_ground/productPage/11">Сливи</a></li>
             </ul>
         </li>
-        <li><a><div class="nav-logo-container"><img src="/Sun_and_ground/images/logos/compote-logo.png" class="nav-logo-img"></div><span>Компоти</span></a>
+        <li><a><div class="nav-logo-container"><img src="/Sun_and_ground/images/logos/compote-logo.png" alt="Не можа да се зареди изображението" class="nav-logo-img"></div><span>Компоти</span></a>
             <ul class="sub-menu">
                 <li><a class="product" data-id="12" href="/Sun_and_ground/productPage/12">Ягоди</a></li>
                 <li><a class="product" data-id="13" href="/Sun_and_ground/productPage/13">Праскови</a></li>
                 <li><a class="product" data-id="14" href="/Sun_and_ground/productPage/14">Череши</a></li>
             </ul>
         </li>
-        <li><a><div class="nav-logo-container"><img src="/Sun_and_ground/images/logos/jam-logo.png" class="nav-logo-img"></div><span>Сладко</span></a>
+        <li><a><div class="nav-logo-container"><img src="/Sun_and_ground/images/logos/jam-logo.png" alt="Не можа да се зареди изображението" class="nav-logo-img"></div><span>Сладко</span></a>
             <ul class="sub-menu">
                 <li><a class="product" data-id="15" href="/Sun_and_ground/productPage/15">Ягоди</a></li>
                 <li><a class="product" data-id="16" href="/Sun_and_ground/productPage/16">Праскови</a></li>
@@ -34,21 +34,21 @@
                 <li><a class="product" data-id="22" href="/Sun_and_ground/productPage/22">Сливи</a></li>
             </ul>
         </li>
-        <li><a><div class="nav-logo-container"><img src="/Sun_and_ground/images/logos/pickle-logo.png" class="nav-logo-img"></div><span>Туршия</span></a>
+        <li><a><div class="nav-logo-container"><img src="/Sun_and_ground/images/logos/pickle-logo.png" alt="Не можа да се зареди изображението" class="nav-logo-img"></div><span>Туршия</span></a>
             <ul class="sub-menu">
                 <li><a class="product" data-id="23" href="/Sun_and_ground/productPage/23">Кисели краставички</a></li>
                 <li><a class="product" data-id="24" href="/Sun_and_ground/productPage/24">Царска туршия</a></li>
                 <li><a class="product" data-id="25" href="/Sun_and_ground/productPage/25">Люти чушки</a></li>
             </ul>
         </li>
-        <li><a><div class="nav-logo-container"><img src="/Sun_and_ground/images/logos/nuts-logo.png" class="nav-logo-img"></div><span>Ядки</span></a>
+        <li><a><div class="nav-logo-container"><img src="/Sun_and_ground/images/logos/nuts-logo.png" alt="Не можа да се зареди изображението" class="nav-logo-img"></div><span>Ядки</span></a>
             <ul class="sub-menu">
                 <li><a class="product" data-id="26" href="/Sun_and_ground/productPage/26">Бадеми</a></li>
                 <li><a class="product" data-id="27" href="/Sun_and_ground/productPage/27">Орехи</a></li>
                 <li><a class="product" data-id="28" href="/Sun_and_ground/productPage/28">Фъстъци</a></li>
             </ul>
         </li>
-        <li><a><div class="nav-logo-container"><img src="/Sun_and_ground/images/logos/dairy-logo.png" class="nav-logo-img"></div><span>Млечни продукти</span></a>
+        <li><a><div class="nav-logo-container"><img src="/Sun_and_ground/images/logos/dairy-logo.png" alt="Не можа да се зареди изображението" class="nav-logo-img"></div><span>Млечни продукти</span></a>
             <ul class="sub-menu">
                 <li><a class="product" data-id="29" href="/Sun_and_ground/productPage/29">Саламурено сирене</a></li>
                 <li><a class="product" data-id="30" href="/Sun_and_ground/productPage/30">Кашкавал</a></li>
@@ -56,7 +56,7 @@
                 <li><a class="product" data-id="32" href="/Sun_and_ground/productPage/32">Кисело мляко</a></li>
             </ul>
         </li>
-        <li><a><div class="nav-logo-container"><img src="/Sun_and_ground/images/logos/honey-logo.png" class="nav-logo-img"></div><span>Пчелни продукти</span></a>
+        <li><a><div class="nav-logo-container"><img src="/Sun_and_ground/images/logos/honey-logo.png" alt="Не можа да се зареди изображението" class="nav-logo-img"></div><span>Пчелни продукти</span></a>
             <ul class="sub-menu">
                 <li><a class="product" data-id="33" href="/Sun_and_ground/productPage/33">Мед</a></li>
                 <li><a class="product" data-id="34" href="/Sun_and_ground/productPage/34">Пчелно млечице</a></li>
@@ -64,7 +64,7 @@
                 <li><a class="product" data-id="36" href="/Sun_and_ground/productPage/36">Пчелен прашец</a></li>
             </ul>
         </li>
-        <li><a><div class="nav-logo-container"><img src="/Sun_and_ground/images/logos/tea-logo.png" class="nav-logo-img"></div><span>Чай</span></a>
+        <li><a><div class="nav-logo-container"><img src="/Sun_and_ground/images/logos/tea-logo.png" alt="Не можа да се зареди изображението" class="nav-logo-img"></div><span>Чай</span></a>
             <ul class="sub-menu">
                 <li><a class="product" data-id="37" href="/Sun_and_ground/productPage/37">Лайка</a></li>
                 <li><a class="product" data-id="38" href="/Sun_and_ground/productPage/38">Липа</a></li>
