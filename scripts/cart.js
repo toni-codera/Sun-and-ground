@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function attachCartItemEventListeners() {
-    const itemsContainer = document.querySelector('.cart-container');
+    const itemsContainer = document.('.cart-container');
     if (!itemsContainer) return;
 
     itemsContainer.addEventListener('click', async (event) => {
