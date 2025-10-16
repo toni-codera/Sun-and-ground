@@ -64,7 +64,7 @@
                 <li><a class="product" data-id="36" href="/Sun_and_ground/productPage/36">Пчелен прашец</a></li>
             </ul>
         </li>
-        <li><a><div class="nav-logo-container"><img src="/Sun_and_ground/images/logos/tea-logo.png" alt="Не можа да се зареди изображението" class="nav-logo-img"></div><span>Чай</span></a>
+        <li><a><div class="nav-logo-container"><img src="/Sun_and_ground/images/logos/tea-logo.png" class="nav-logo-img"></div><span>Чай</span></a>
             <ul class="sub-menu">
                 <li><a class="product" data-id="37" href="/Sun_and_ground/productPage/37">Лайка</a></li>
                 <li><a class="product" data-id="38" href="/Sun_and_ground/productPage/38">Липа</a></li>
